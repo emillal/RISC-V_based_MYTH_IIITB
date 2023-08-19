@@ -426,6 +426,11 @@ The output screenshots are shown below:<br />
  ```
 
 The file firmware.hex is the hex file and firmware32.hex is the bitstream generated.<br />
+The below file is firmware.hex.<br />
+![Screenshot from 2023-08-19 19-03-24](https://github.com/mrdunker/RISC-V_based_MYTH_IIIITB/assets/38190245/83b6a54b-6e82-4dd1-9d30-c0992e125820)
+<br /><br />
+The below file is firmware32.hex  (bitstream).<br />
+![Screenshot from 2023-08-19 19-03-42](https://github.com/mrdunker/RISC-V_based_MYTH_IIIITB/assets/38190245/48f4cbb3-ad76-4e53-89dd-7885fc2eba3a)
 
 </details>
 
