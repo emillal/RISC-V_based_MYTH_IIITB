@@ -301,7 +301,19 @@ The below screenshot shows the output of the same.<br />
   - 16: offset immediate
   - x23: Souce register 'rs1'
  <br />
- Here the immediate offset gets added to the contents of the source register to form the final address and loads the  
+ Here the immediate offset gets added to the contents of the source register to form the final address and loads the value from '16' in the figure above into the x8 reg.<br />
+
+ ### Instruction sets
+ 
+![Screenshot from 2023-08-19 16-12-32](https://github.com/mrdunker/RISC-V_based_MYTH_IIIITB/assets/38190245/d74c08b8-50e8-474d-8350-f29bd9fa30cb)
+<br />
+The diagram above represents the instruction.<br />
+It  is important to note that even though the register size is of 64-bit in RV64 the instruction size is 32-bit.<br />
+The opcode and the funct3 determine the type of instruction, whether it is an 'ld' or 'addi' etc.<br />
+rs1 and rd are the source and destination 
+
+
+ 
 
 	
 </details>
