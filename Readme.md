@@ -24,6 +24,7 @@ This repository summarises work done on the RISC-V workshop by VSD Corp. Pvt. Lt
 </details>
 <details>
   <summary>Lab 1 : RISC-V software toolchain</summary>
+  <br />	
   First, let us write a basic C program to find the sum of n numbers.<br />
   
   ```
@@ -66,8 +67,33 @@ This repository summarises work done on the RISC-V workshop by VSD Corp. Pvt. Lt
       **within .bashrc file **
       source .bashrc
       ```
-      
-                                               
+
+   <br />
+   So to compile the .c file with the RISC-V compiler tool. we are using the below command.<br /><br />
+   
+   ```
+   riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o <filename>.o <filename>.c
+   ```
+   <br />
+   To view the assembly code for the same, do the following command.<br /><br />
+   
+   ```
+   riscv64-unknown-elf-objdump -d <filename>.o
+   ```
+   ![Screenshot from 2023-08-19 07-51-55](https://github.com/mrdunker/RISC-V_based_MYTH_IIIITB/assets/38190245/723e9b0f-2c68-481c-be8a-e96635999e88)
+
+
+   To view the detailed code do the following command.<br />
+
+   ```
+   riscv64-unknown-elf-objdump -d <filename>.o | less
+   ```
+   To find **main** we type /main in the **:<command>** and press the 'N' button.<br />
+   
+   ![Screenshot from 2023-08-19 07-59-21](https://github.com/mrdunker/RISC-V_based_MYTH_IIIITB/assets/38190245/8caf4dea-5340-4655-b708-ad93a195daf0)
+
+   In the above screenshot, we can see the memory address for the instructions. Where it starts and where another one begins.<br />
+   If we subtract '**0000000000010184**'(beginning of main) and '**00000000000101c0**'(end of main) and divide by 4 we get 15. Which is the number of instructions within that particular block(main).<br />
 
   
 </details>
