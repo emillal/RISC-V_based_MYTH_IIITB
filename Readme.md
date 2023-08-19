@@ -273,10 +273,36 @@ The below screenshot shows the output of the same.<br />
   - Can be loaded into memory and then loaded to reg
 
   <br />
-  RISC-V follows little endian condition which is illustrated by the figure below:<br />
+  RISC-V follows the little-endian condition.<br />
+  Little Endian is a byte order or endianness used in computer architecture to represent multi-byte data types such as integers and floating-point numbers in memory.<br /> 
+  In a Little Endian system, the least significant byte (LSB) of a multi-byte value is stored at the lowest memory address, while the most significant byte (MSB)
+  is stored at the highest memory address.<br /><br />
+  RISC-V little-endian is illustrated by the figure below:<br />
   
   ![Screenshot from 2023-08-19 15-44-13](https://github.com/mrdunker/RISC-V_based_MYTH_IIIITB/assets/38190245/7fccf896-d030-496e-bc23-8f5852414520)
   <br />
   
+</details>
+<details>
+  <summary>Load,Add and Store Instructions</summary>
+   Firstly let us load an array 'M' of 3 double-word as shown in the below figure.<br />
+	
+   ![Screenshot from 2023-08-19 15-59-44](https://github.com/mrdunker/RISC-V_based_MYTH_IIIITB/assets/38190245/c5342f67-4af9-4a6e-a5fa-3ecc7dfe1e8b)
+   <br />
+   Here let us load it into the 'x8' register. let's say reg 'x23' contains the base address of array **M** and it is '0'.<br />
+   as in it starts at 0. Let us consider the instruction below.<br />
+
+   ```
+   ld   x8, 16(x23)
+   ```
+  breaking down the instruction:<br />
+  - ld: load double
+  - x8: destination register 'rd'
+  - 16: offset immediate
+  - x23: Souce register 'rs1'
+ <br />
+ Here the immediate offset gets added to the contents of the source register to form the final address and loads the  
+
+	
 </details>
 
