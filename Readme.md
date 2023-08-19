@@ -345,6 +345,92 @@ There are mainly three types of Instructions:<br />
 </details>
 
 <details>
-  <summary><>	
+  <summary>LAB work using ABI function calls</summary>	
+    <br />
+    For this lab, we are going to create a C program and simulate it with a Function call.<br />
+    We are going to be following the below algorithm.<br />
+    
+   ![Screenshot from 2023-08-19 18-27-06](https://github.com/mrdunker/RISC-V_based_MYTH_IIIITB/assets/38190245/5c77693e-5d2f-4466-ba04-f8148b8b5f3a)
+   <br />
+   The C program used is:<br />
+
+   ```
+   #include <stdio.h>
+   extern int load(int x,int y);
+   int main()
+	{
+    	int result = 0;
+   	int count =9;
+    	result = load(0x0,count+1);
+    	printf("Sum of numbers from 1 to %d is %d\n",count,result);
+	}
+   ```
+   We also create a load.S file as below:<br />
+   
+   ```
+   .section .text
+   .global load
+   .type load, @function
+
+   load: 
+        add   a4,a0,zero    //initialize sum register a4 with 0x0
+        add   a2,a0,a1      //store count of 10 in reg a. reg a1 is loaded with 0xa(decimal 10) from main
+        add   a3,a0,zero    //initialize intermediate sum reg a3 by 0x0
+
+   loop:
+	add   a4,a3,a4     // Incremental addition
+        addi  a3,a3,1      // Increment intermediate register by 1
+        blt   a3,a2,loop   // If a3 is less than a2,branch to label <loop> 
+        add   a0,a4,zero   // store final result to reg a0 so that it can be read by main pgm
+        ret
+
+   ```
+We do the following commands in the terminal:<br />
+
+```
+riscv64-unknown-elf-gcc -ofast -mabi=lp64 -march=rv64i -o <filename>.o <filename>.c load.S
+spike pk <filename>.o
+riscv64-unknown-elf-objdump -d <filename>.o | less
+
+```
+The output screenshots are shown below:<br />
+![Screenshot from 2023-08-19 18-34-28](https://github.com/mrdunker/RISC-V_based_MYTH_IIIITB/assets/38190245/08969317-393a-43de-a74c-0839f0e4fbc5)
+![Screenshot from 2023-08-19 18-35-44](https://github.com/mrdunker/RISC-V_based_MYTH_IIIITB/assets/38190245/0a357ad0-9cb7-4e84-82da-d9eacd7763e6)
+
+</details>
+
+<details>
+<summary>Basic verification flow using verilog</summary>
+<br />
+ In this lab, we are basically going to generate a hex file and a bitstream of the same code done above.<br />
+ We run the below code to generate the same.<br />
+
+ ```
+ riscv64-unknown-elf-gcc -c -mabi=ilp32 -march=rv32im -o <filename>.o <filename>.c
+ riscv64-unknown-elf-gcc -c -mabi=ilp32 -march=rv32im -o load.o load.S
+
+ riscv64-unknown-elf-gcc -c -mabi=ilp32 -march=rv32im -o syscalls.o syscalls.c
+ riscv64-unknown-elf-gcc -mabi=ilp32 -march=rv32im -Wl,--gc-sections -o firmware.elf load.o <filename>.o syscalls.o -T riscv.ld -lstdc++
+ chmod -x firmware.elf
+ riscv64-unknown-elf-gcc -mabi=ilp32 -march=rv32im -nostdlib -o start.elf start.S -T start.ld -lstdc++
+ chmod -x start.elf
+ riscv64-unknown-elf-objcopy -O verilog start.elf start.tmp
+ riscv64-unknown-elf-objcopy -O verilog firmware.elf firmware.tmp
+ cat start.tmp firmware.tmp > firmware.hex
+ python3 hex8tohex32.py firmware.hex > firmware32.hex
+ rm -f start.tmp firmware.tmp
+ iverilog -o testbench.vvp testbench.v picorv32.v
+ chmod -x testbench.vvp
+ vvp -N testbench.vvp
+
+ ```
+
+The file firmware.hex is the hex file and firmware32.hex is the bitstream generated.<br />
+
+</details>
+
+# Day 3
+<details>
+<summary></summary>
 </details>
 
