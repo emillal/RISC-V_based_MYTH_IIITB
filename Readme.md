@@ -333,5 +333,14 @@ The Instruction structure will look like so(**S-type**):<br />
 ![Screenshot from 2023-08-19 16-35-09](https://github.com/mrdunker/RISC-V_based_MYTH_IIIITB/assets/38190245/71eff24c-8d55-4982-bd3b-7c313ddcafb1)
 <br />
 
+### Instruction set in RISC-V
+There are mainly three types of Instructions:<br />
+1. I-type: I-type instructions are used for operations that involve an immediate value (constant) and a register.
+2. R-type: R-type instructions are used for operations that involve two source registers and a destination register.<br />
+   	   These instructions typically perform arithmetic, logical, or bitwise operations.
+3. S-type: S-type instructions are used for memory store operations.<br/>
+ 	   These instructions store data from a source register in memory at an address determined by an offset from another register.
+
+
 </details>
 
