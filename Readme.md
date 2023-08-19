@@ -7,19 +7,23 @@ This repository summarises work done on the RISC-V workshop hosted by **Kunal Gh
   <br />
   RISC-V is an open-source instruction set architecture (ISA) for computer processors.<br>
   An instruction set architecture defines the set of instructions that a processor can execute and the organization and behaviour of those instructions.
-  RISC-V is unique in that any single company or organization does not own it. and it is freely available for anyone to use, modify, and implement without the need for licensing fees or proprietary restrictions.<br />  
+  RISC-V is unique in that any single company or organization does not own it. and it is freely available for anyone to use, modify, and implement without 
+  the need for licensing fees or proprietary restrictions.<br />  
   <br />
   The RISC-V project began at the University of California, Berkeley in 2010, and it has since gained significant traction in both academia and industry.
-  Its open nature has led to a growing ecosystem of hardware and software developers collaborating to create a wide range of products, from simple embedded devices to high-performance supercomputers.
+  Its open nature has led to a growing ecosystem of hardware and software developers collaborating to create a wide range of products, from simple embedded 
+ devices to high-performance supercomputers.
   <br /><br/>
 
   ![Screenshot from 2023-08-19 12-10-50](https://github.com/mrdunker/RISC-V_based_MYTH_IIIITB/assets/38190245/ab1ac3a5-139e-499e-8863-4f3e4a9777aa)
 
   <br/>
-  Application software (apps) and hardware are linked by 'system software'.There are various layers of **system software**. This includes major components like Compiler and Assembler.<br />
+  Application software (apps) and hardware are linked by 'system software'.There are various layers of **system software**. This includes major components like   
+  Compiler and Assembler.<br />
   <br />
   The compiler compiles high-level codes like C and C++ to Instructions(eg: the codes inside .exe files) that can be read by the Assembler.<br />
-  The Assembler converts it into binary codes which the machine can understand. The instructions act as an interface between the high-level language and the machine language.<br />
+  The Assembler converts it into binary codes which the machine can understand. The instructions act as an interface between the high-level language and the 
+  machine language.<br />
   <br />
   The converted binary is then given to an RTL snippet that understands the instruction. This is done by a Hardware Description Language (HDL).<br />
   This is basically called RTL implementation and a netlist is being generated. with this, a physical design implementation of the design is generated.<br />
@@ -96,7 +100,8 @@ This repository summarises work done on the RISC-V workshop hosted by **Kunal Gh
    ![Screenshot from 2023-08-19 07-59-21](https://github.com/mrdunker/RISC-V_based_MYTH_IIIITB/assets/38190245/8caf4dea-5340-4655-b708-ad93a195daf0)
 
    In the above screenshot, we can see the memory address for the instructions. Where it starts and where another one begins.<br />
-   If we subtract '**00000000000101c0**'(end of main) and '**0000000000010184**'(beginning of main) and then divide by 4 we get 15. Which is the number of instructions within that particular    block(main).<br />
+   If we subtract '**00000000000101c0**'(end of main) and '**0000000000010184**'(beginning of main) and then divide by 4 we get 15. Which is the number of 
+   instructions within that particular block(main).<br />
    <br />
 
    Now let's execute the below commands:<br/>
@@ -197,9 +202,8 @@ is the number of instructions within that particular block(main).<br />
    the sign bit. A value of 0 in the 
    sign bit represents a positive number, and a value of 1 represents a negative number. The remaining bits represent the magnitude of the number in binary form.
    <br /><br />
-   To negate a number in two's complement, you invert all the bits (change 0s to 1s and vice versa) and then add 1 to the result. This method simplifies arithmetic operations and eliminates the 
-   need for a separate subtraction circuit.
-   
+   To negate a number in two's complement, you invert all the bits (change 0s to 1s and vice versa) and then add 1 to the result. This method simplifies 
+   arithmetic operations and eliminates the need for a separate subtraction circuit.
 
 </details>
 <details>
@@ -262,17 +266,19 @@ The below screenshot shows the output of the same.<br />
   
   ![Screenshot from 2023-08-19 15-20-31](https://github.com/mrdunker/RISC-V_based_MYTH_IIIITB/assets/38190245/8850d871-98dc-4978-95ea-36abf4c9973c)
   <br />
-  ABIs are crucial for enabling interoperability between different software components, whether they're compiled by the same or different compilers, or even running on different hardware 
-  architectures. Operating systems, libraries, and various programming languages need to adhere to a specific ABI to ensure that their binary components can work together seamlessly.<br />
+  ABIs are crucial for enabling interoperability between different software components, whether they're compiled by the same or different compilers, or even 
+  running on different hardware 
+  architectures. Operating systems, libraries, and various programming languages need to adhere to a specific ABI to ensure that their binary components can work 
+  together seamlessly.<br />
   <br />
-  ### What is XLEN?
+  ## What is XLEN?
   <br />
-  'XLEN' typically refers to the **X Register Length**. The XLEN value represents the number of bits in the general-purpose registers, which are used for storing data
-  and performing computations. In a RISC-V system with a 32-bit XLEN, the general-purpose registers would be 32 bits wide.<br /> 
-  Similarly, **in a RISC-V system with a 64-bit XLEN, the general-purpose registers would be 64 bits wide**. The XLEN value has a significant impact on the performance, memory-addressing 
-  capabilities, and overall capabilities of the processor.<br />
-  A larger XLEN allows for more addressable memory space and potentially more complex computations. However, it also comes with increased hardware. The XLEN value has a significant impact on the 
-  performance, memory-addressing capabilities, and overall capabilities of the processor. <br />
+  'XLEN' typically refers to the **X Register Length**. The XLEN value represents the number of bits in the general-purpose registers, which are used for 
+  storing data and performing computations. In a RISC-V system with a 32-bit XLEN, the general-purpose registers would be 32 bits wide.<br /> 
+  Similarly, **in a RISC-V system with a 64-bit XLEN, the general-purpose registers would be 64 bits wide**. The XLEN value has a significant impact on the 
+  performance, memory-addressing capabilities, and overall capabilities of the processor.<br />
+  A larger XLEN allows for more addressable memory space and potentially more complex computations. However, it also comes with increased hardware. The XLEN 
+  value has a significant impact on the performance, memory-addressing capabilities, and overall capabilities of the processor. <br />
 
   There are two ways in which we can load data  into the 64-bit register.<br />
   - Can be directly loaded
@@ -280,7 +286,8 @@ The below screenshot shows the output of the same.<br />
 
   <br />
   RISC-V follows the little-endian condition.<br />
-  Little Endian is a byte order or endianness used in computer architecture to represent multi-byte data types such as integers and floating-point numbers in memory.<br /> 
+  Little Endian is a byte order or endianness used in computer architecture to represent multi-byte data types such as integers and floating-point numbers in 
+  memory.<br /> 
   In a Little Endian system, the least significant byte (LSB) of a multi-byte value is stored at the lowest memory address, while the most significant byte (MSB)
   is stored at the highest memory address.<br /><br />
   RISC-V little-endian is illustrated by the figure below:<br />
@@ -309,7 +316,8 @@ The below screenshot shows the output of the same.<br />
   - 16: offset immediate
   - x23: Souce register 'rs1'
  <br />
- Here the immediate offset gets added to the contents of the source register to form the final address and loads the value from '16' in the figure above into the x8 reg.<br />
+ Here the immediate offset gets added to the contents of the source register to form the final address and loads the value from '16' in the figure above into
+ the x8 reg.<br />
  
 ![Screenshot from 2023-08-19 16-12-32](https://github.com/mrdunker/RISC-V_based_MYTH_IIIITB/assets/38190245/d74c08b8-50e8-474d-8350-f29bd9fa30cb)
 <br />
@@ -325,7 +333,8 @@ Let us look at another instruction,**add**.<br />
 add x8, x24,x8
 ```
 <br />
-The structure for the above command is given below (R-type), unlike the one before here there are two source registers instead of one and another funct register also. <br />
+The structure for the above command is given below (R-type), unlike the one before here there are two source registers instead of one and another funct 
+register also. <br />
 
 ![Screenshot from 2023-08-19 16-23-38](https://github.com/mrdunker/RISC-V_based_MYTH_IIIITB/assets/38190245/adb5c485-27ad-4907-8220-cb8fe59d7ecb)
 
@@ -453,7 +462,7 @@ In this part of the workshop, we are going to look at:<br />
  5. Piplining logic
  6. Slate
 
-### Introduction to logic gates
+## Introduction to logic gates
 
 Logic gates are fundamental building blocks of digital circuits. They are electronic devices that perform basic logical operations
 on one or more binary inputs (usually 0 or 1) to produce a single binary output. These gates are the foundation of all digital systems, 
