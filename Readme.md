@@ -196,4 +196,31 @@ In the above screenshot, if we subtract '**00000000000100e0**'(end of main) and 
    
 
 </details>
+<details>
+  <summary>Lab Signed and unsigned</summary>
+  
+### LAB 3A 
+
+Here we are going to execute the following code.<br />
+The output is given for unsigned numbers and we are just viewing if it is within the range or it goes out in which case displays either the minimum or maximum values.<br />
+
+```
+
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    unsigned long long int max = (unsigned long long int)(pow(2,64)-1);       //statement 1  //will display the max number
+    //unsigned long long int max = (unsigned long long int)(pow(2,127)-1);    //statement 2  //(out of range) will display the max number(within range)
+    //unsigned long long int max = (unsigned long long int)(pow(2,10)-1);     //statement 3  //will display number (since it is within range)
+    //unsigned long long int max = (unsigned long long int)(pow(2,64) * -1);  //statement 4  //will display 0 since it is a -ve number
+    printf("highest number represented by unsigned long long int is %llu\n",max);
+    return 0;
+}
+```
+The output is given below in sequential order.<br />
+![Screenshot from 2023-08-19 13-10-09](https://github.com/mrdunker/RISC-V_based_MYTH_IIIITB/assets/38190245/5f4c5dfd-57b1-430f-9b67-67af49ae30a6)
+
+	
+</details>
 
