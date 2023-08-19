@@ -464,6 +464,8 @@ The most common logic gates are:<br />
 7. XNOR
 
 ![Screenshot from 2023-08-19 21-30-21](https://github.com/mrdunker/RISC-V_based_MYTH_IIIITB/assets/38190245/ffb2cea3-d872-43e4-ba83-86e5e604ae9d)
+<br />
+
 
  
 
