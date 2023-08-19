@@ -286,12 +286,13 @@ The below screenshot shows the output of the same.<br />
 <details>
   <summary>Load,Add and Store Instructions</summary>
    <br />
+
    Firstly let us load an array 'M' of 3 double-word as shown in the below figure.<br />
 	
    ![Screenshot from 2023-08-19 15-59-44](https://github.com/mrdunker/RISC-V_based_MYTH_IIIITB/assets/38190245/c5342f67-4af9-4a6e-a5fa-3ecc7dfe1e8b)
    <br />
    Here let us load it into the 'x8' register. let's say reg 'x23' contains the base address of array **M** and it is '0'.<br />
-   as in it starts at 0. Let us consider the instruction below.<br />
+   as in it starts at 0. Let us consider the instruction below,**ld(load doubleword)**.<br />
 
    ```
    ld   x8, 16(x23)
@@ -312,7 +313,7 @@ The opcode and the funct3 determine the type of instruction, whether it is an 'l
 rs1 and rd are the source and destination registers respectively.<br />
 The immediate bits will contain the offset.<br />
 <br />
-Let us look at another instruction.<br />
+Let us look at another instruction,**add**.<br />
 
 ```
 add x8, x24,x8
@@ -322,10 +323,15 @@ The structure for the above command is given below, unlike the one before here t
 
 ![Screenshot from 2023-08-19 16-23-38](https://github.com/mrdunker/RISC-V_based_MYTH_IIIITB/assets/38190245/adb5c485-27ad-4907-8220-cb8fe59d7ecb)
 
+There is another instruction going by **sd(store doubleword)**.<br />
 
+```
+sd x8, 8(x23)
+```
+Since there is a limited availability of registers we need to store values to registers after loading and doing operations.<br />
+The Instruction structure will look like so:<br />
+![Screenshot from 2023-08-19 16-35-09](https://github.com/mrdunker/RISC-V_based_MYTH_IIIITB/assets/38190245/71eff24c-8d55-4982-bd3b-7c313ddcafb1)
+<br />
 
- 
-
-	
 </details>
 
