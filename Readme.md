@@ -466,9 +466,24 @@ The most common logic gates are:<br />
 ![Screenshot from 2023-08-19 21-30-21](https://github.com/mrdunker/RISC-V_based_MYTH_IIIITB/assets/38190245/ffb2cea3-d872-43e4-ba83-86e5e604ae9d)
 <br />
 
+## Makerchip
+[Makerchip](https://makerchip.com/) is an online platform that provides an integrated development environment (IDE) for digital design and verification using 
+SystemVerilog and TL  Verilog. It allows engineers, students, and enthusiasts to design and simulate digital circuits, develop RTL (Register Transfer Level) 
+code, and explore hardware design concepts without requiring the local installation of tools.
 
  
 
 	
 </details>
+
+# Acknowledgements
+- [Kunal Ghosh](https://github.com/kunalg123), Co-founder, VSD Corp. Pvt. Ltd.
+- [Steve Hoover](https://github.com/stevehoover), Founder, Redwood EDA
+- [Shivani Shah](https://github.com/shivanishah269), IIIT-Bangalore
+  
+# References
+
+1. https://github.com/kunalg123/riscv_workshop_collaterals
+   
+
 
