@@ -12,6 +12,8 @@ This repository summarises work done on the RISC-V workshop by VSD Corp. Pvt. Lt
   The RISC-V project began at the University of California, Berkeley in 2010, and it has since gained significant traction in both academia and industry.
   Its open nature has led to a growing ecosystem of hardware and software developers collaborating to create a wide range of products, from simple embedded devices to high-performance supercomputers.
   <br />
+
+  
   
   Application software (apps) and hardware are linked by 'system software'.There are various layers of **system software**. This includes major components like Compiler and Assembler.<br />
   <br />
@@ -23,7 +25,7 @@ This repository summarises work done on the RISC-V workshop by VSD Corp. Pvt. Lt
 
 </details>
 <details>
-  <summary>Lab 1 : RISC-V software toolchain</summary>
+  <summary>Lab 1 : RISC-V software toolchain | GCC Compile and Disassemble</summary>
   <br />	
   First, let us write a basic C program to find the sum of n numbers.<br />
   
@@ -110,3 +112,68 @@ In the above screenshot, if we subtract '**00000000000100e0**'(end of main) and 
 
   
 </details>
+<details>
+   <summary>Lab 2 : Spike Simulation and Debug</summary>
+    <br />
+    In this lab, we are going to Debug the '.o' file that we generated using the RISC-V compiler.<br />
+    For that, we use the following command:
+
+    ```
+    spike pk <filename>.o // to give an output
+    spike -d pk <filename>.o //open debugger
+    ```
+   The debugger mode will be open.<br />
+   We use the until command to move to a particular address.<br />
+   Here we are debugging the highlighted instructions.<br /><br />
+   ![Screenshot from 2023-08-19 09-49-10](https://github.com/mrdunker/RISC-V_based_MYTH_IIIITB/assets/38190245/20f164b4-07c2-4ff1-9f56-012dc38590df)
+   <br />
+   
+   The following commands are used in the debugger:<br />
+   ```
+   until pc 0 100b0 //moves the program counter(PC) to the address
+   reg 0 a2    //views content of the address
+   **We press enter to go to the next instruction**
+   ```
+
+   ![Screenshot from 2023-08-19 09-49-25](https://github.com/mrdunker/RISC-V_based_MYTH_IIIITB/assets/38190245/e319c824-4009-47f3-806d-fd0c1ac7ce3b)
+   <br />
+
+   In the above screenshot, we can see the register pertaining to a particular instruction getting updated.<br />
+	
+</details>
+
+<details>
+    <summary>Integer number representation</summary>
+    <br />
+    Integer number representation refers to the method used to represent whole numbers (integers) within a computer's memory or processor. There are different ways to represent integers in binary      form, which is the fundamental language of computers. <br />
+    On a high level, we recognize numbers as decimals but computers recognize them as binary (1's or 0's). So binary conversion is key here.<br/><br />
+    
+![Screenshot from 2023-08-19 11-56-34](https://github.com/mrdunker/RISC-V_based_MYTH_IIIITB/assets/38190245/64d3197c-7010-4473-9013-42cb67cc59d0)
+	
+   It is important to note that:
+   - 1 byte is 8 bits
+   - 1 word is 4 bytes
+   - 2 words (double word) is 8 bytes
+   <br />
+   So A word is 32 bits and a double word is 16 bits.<br />
+   <br />
+   ### 2 bit
+   <br />
+   the total number of representations = **2^2=4**<br />
+   0 -> (2^2 -1)<br />
+
+   <br />
+   ### 4 bit
+   <br />
+   the total number of representations = **2^4=16**<br />
+   0 -> (2^4 -1)<br />
+
+   <br />
+   Similarly, we can follow the same for the **RISC-V** which has 64-bit Architecture.
+   <br />
+   the total number of representations = **2^16**<br />
+   0 -> (2^16 -1)<br />
+   
+
+</details>
+
