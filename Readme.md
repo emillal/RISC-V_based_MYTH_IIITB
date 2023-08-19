@@ -11,10 +11,11 @@ This repository summarises work done on the RISC-V workshop by VSD Corp. Pvt. Lt
   <br />
   The RISC-V project began at the University of California, Berkeley in 2010, and it has since gained significant traction in both academia and industry.
   Its open nature has led to a growing ecosystem of hardware and software developers collaborating to create a wide range of products, from simple embedded devices to high-performance supercomputers.
-  <br />
+  <br /><br/>
 
-  
-  
+  ![Screenshot from 2023-08-19 12-10-50](https://github.com/mrdunker/RISC-V_based_MYTH_IIIITB/assets/38190245/ab1ac3a5-139e-499e-8863-4f3e4a9777aa)
+
+  <br/>
   Application software (apps) and hardware are linked by 'system software'.There are various layers of **system software**. This includes major components like Compiler and Assembler.<br />
   <br />
   The compiler compiles high-level codes like C and C++ to Instructions(eg: the codes inside .exe files) that can be read by the Assembler.<br />
