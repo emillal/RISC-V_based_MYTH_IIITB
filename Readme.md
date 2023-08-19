@@ -244,3 +244,26 @@ The below screenshot shows the output of the same.<br />
 	
 </details>
 
+# Day 2
+
+<details>
+  <summary>Introduction to ABI and verification Flows</summary>
+  <br />
+  The Application Binary Interface (ABI) is a set of rules and conventions that dictate how binary code communicates and interacts with other binary code, usually across different components of a 
+  software system or even across different software systems. In simpler terms, it defines how functions are called, how data is organized, and how components cooperate at the binary level.<br />
+
+  There are multiple layers between the Application program and the Hardware. One of these layers is the ABI.<br />
+  
+  ![Screenshot from 2023-08-19 15-20-31](https://github.com/mrdunker/RISC-V_based_MYTH_IIIITB/assets/38190245/8850d871-98dc-4978-95ea-36abf4c9973c)
+  <br />
+  ABIs are crucial for enabling interoperability between different software components, whether they're compiled by the same or different compilers, or even running on different hardware 
+  architectures. Operating systems, libraries, and various programming languages need to adhere to a specific ABI to ensure that their binary components can work together seamlessly.<br />
+  <br />
+  ### What is XLEN?
+  <br />
+  'XLEN' typically refers to the **X Register Length**. The XLEN value represents the number of bits in the general-purpose registers, which are used for storing data<br />
+  and performing computations. in a RISC-V system with a 32-bit XLEN, the general-purpose registers would be 32 bits wide. Similarly, in a RISC-V system with a 64-bit XLEN,<br />
+  the general-purpose registers would be 64 bits wide.
+  
+</details>
+
