@@ -446,10 +446,24 @@ In this part of the workshop, we are going to look at:<br />
  4. Sequential Logic
  5. Piplining logic
  6. Slate
-<br />
 
 ### Introduction to logic gates
-<br />
+
+Logic gates are fundamental building blocks of digital circuits. They are electronic devices that perform basic logical operations
+on one or more binary inputs (usually 0 or 1) to produce a single binary output. These gates are the foundation of all digital systems, 
+including computers, microcontrollers, and other digital devices. Logic gates are typically implemented using electronic 
+components such as transistors.<br />
+
+The most common logic gates are:<br />
+1. NOT
+2. AND
+3. OR
+4. NAND
+5. NOR
+6. XOR
+7. XNOR
+
+![Screenshot from 2023-08-19 21-30-21](https://github.com/mrdunker/RISC-V_based_MYTH_IIIITB/assets/38190245/ffb2cea3-d872-43e4-ba83-86e5e604ae9d)
 
  
 
