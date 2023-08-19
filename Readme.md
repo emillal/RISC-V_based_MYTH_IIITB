@@ -93,7 +93,20 @@ This repository summarises work done on the RISC-V workshop by VSD Corp. Pvt. Lt
    ![Screenshot from 2023-08-19 07-59-21](https://github.com/mrdunker/RISC-V_based_MYTH_IIIITB/assets/38190245/8caf4dea-5340-4655-b708-ad93a195daf0)
 
    In the above screenshot, we can see the memory address for the instructions. Where it starts and where another one begins.<br />
-   If we subtract '**0000000000010184**'(beginning of main) and '**00000000000101c0**'(end of main) and divide by 4 we get 15. Which is the number of instructions within that particular block(main).<br />
+   If we subtract '**00000000000101c0**'(end of main) and '**0000000000010184**'(beginning of main) and then divide by 4 we get 15. Which is the number of instructions within that particular    block(main).<br />
+   <br />
+
+   Now let's execute the below commands:<br/>
+
+   ```
+   riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o <filename>.o <filename>.c
+   riscv64-unknown-elf-objdump -d <filename>.o | less
+   ```
+  ![Screenshot from 2023-08-19 08-14-21](https://github.com/mrdunker/RISC-V_based_MYTH_IIIITB/assets/38190245/43edc39a-1c7e-4216-93d5-60ded9c4d433)
+
+  
+In the above screenshot, if we subtract '**00000000000100e0**'(end of main) and '**00000000000100b0**'(beginning of main) and then divide by 4 we get 12. Which is the number of instructions within that particular block(main).<br />
+   <br />
 
   
 </details>
