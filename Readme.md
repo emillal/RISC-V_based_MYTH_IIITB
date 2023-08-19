@@ -285,6 +285,7 @@ The below screenshot shows the output of the same.<br />
 </details>
 <details>
   <summary>Load,Add and Store Instructions</summary>
+   <br />
    Firstly let us load an array 'M' of 3 double-word as shown in the below figure.<br />
 	
    ![Screenshot from 2023-08-19 15-59-44](https://github.com/mrdunker/RISC-V_based_MYTH_IIIITB/assets/38190245/c5342f67-4af9-4a6e-a5fa-3ecc7dfe1e8b)
@@ -302,15 +303,25 @@ The below screenshot shows the output of the same.<br />
   - x23: Souce register 'rs1'
  <br />
  Here the immediate offset gets added to the contents of the source register to form the final address and loads the value from '16' in the figure above into the x8 reg.<br />
-
- ### Instruction sets
  
 ![Screenshot from 2023-08-19 16-12-32](https://github.com/mrdunker/RISC-V_based_MYTH_IIIITB/assets/38190245/d74c08b8-50e8-474d-8350-f29bd9fa30cb)
 <br />
 The diagram above represents the instruction.<br />
 It  is important to note that even though the register size is of 64-bit in RV64 the instruction size is 32-bit.<br />
 The opcode and the funct3 determine the type of instruction, whether it is an 'ld' or 'addi' etc.<br />
-rs1 and rd are the source and destination 
+rs1 and rd are the source and destination registers respectively.<br />
+The immediate bits will contain the offset.<br />
+<br />
+Let us look at another instruction.<br />
+
+```
+add x8, x24,x8
+```
+<br />
+The structure for the above command is given below, unlike the one before here there are two source registers instead of one and another funct register also. <br />
+
+![Screenshot from 2023-08-19 16-23-38](https://github.com/mrdunker/RISC-V_based_MYTH_IIIITB/assets/38190245/adb5c485-27ad-4907-8220-cb8fe59d7ecb)
+
 
 
  
