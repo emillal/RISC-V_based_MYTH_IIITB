@@ -436,6 +436,23 @@ The below file is firmware32.hex  (bitstream).<br />
 
 # Day 3
 <details>
-<summary></summary>
+<summary>Digital logic with TL-Verilog and Makerchip</summary>
+<br />
+	
+In this part of the workshop, we are going to look at:<br />
+ 1. Logic gates
+ 2. MakerChip platform(IDE)
+ 3. Combinational Logic
+ 4. Sequential Logic
+ 5. Piplining logic
+ 6. Slate
+<br />
+
+### Introduction to logic gates
+<br />
+
+ 
+
+	
 </details>
 
