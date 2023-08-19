@@ -261,9 +261,22 @@ The below screenshot shows the output of the same.<br />
   <br />
   ### What is XLEN?
   <br />
-  'XLEN' typically refers to the **X Register Length**. The XLEN value represents the number of bits in the general-purpose registers, which are used for storing data<br />
-  and performing computations. in a RISC-V system with a 32-bit XLEN, the general-purpose registers would be 32 bits wide. Similarly, in a RISC-V system with a 64-bit XLEN,<br />
-  the general-purpose registers would be 64 bits wide.
+  'XLEN' typically refers to the **X Register Length**. The XLEN value represents the number of bits in the general-purpose registers, which are used for storing data
+  and performing computations. In a RISC-V system with a 32-bit XLEN, the general-purpose registers would be 32 bits wide.<br /> 
+  Similarly, **in a RISC-V system with a 64-bit XLEN, the general-purpose registers would be 64 bits wide**. The XLEN value has a significant impact on the performance, memory-addressing 
+  capabilities, and overall capabilities of the processor.<br />
+  A larger XLEN allows for more addressable memory space and potentially more complex computations. However, it also comes with increased hardware. The XLEN value has a significant impact on the 
+  performance, memory-addressing capabilities, and overall capabilities of the processor. <br />
+
+  There are two ways in which we can load data  into the 64-bit register.<br />
+  - Can be directly loaded
+  - Can be loaded into memory and then loaded to reg
+
+  <br />
+  RISC-V follows little endian condition which is illustrated by the figure below:<br />
+  
+  ![Screenshot from 2023-08-19 15-44-13](https://github.com/mrdunker/RISC-V_based_MYTH_IIIITB/assets/38190245/7fccf896-d030-496e-bc23-8f5852414520)
+  <br />
   
 </details>
 
