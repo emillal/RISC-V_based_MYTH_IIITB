@@ -1,5 +1,5 @@
 # RISC-V based MYTH
-This repository summarises work done on the RISC-V workshop by VSD Corp. Pvt. Ltd.<br />
+This repository summarises work done on the RISC-V workshop hosted by **Kunal Ghosh** of VSD Corp. Pvt. Ltd.<br />
 
 # Day 1
 <details>
@@ -148,6 +148,14 @@ In the above screenshot, if we subtract '**00000000000100e0**'(end of main) and 
     <br />
     Integer number representation refers to the method used to represent whole numbers (integers) within a computer's memory or processor. There are different ways to represent integers in binary      form, which is the fundamental language of computers. <br />
     On a high level, we recognize numbers as decimals but computers recognize them as binary (1's or 0's). So binary conversion is key here.<br/><br />
+
+  ### Unsigned Numbers
+  <br />
+  Unsigned numbers are a type of integer representation that only includes non-negative integers. These numbers do not have a sign bit to indicate whether they are positive or negative; they   
+  represent values greater than or equal to zero. In binary representation, all the bits are used to represent the magnitude of the number, and there is no need to allocate a bit for the sign.
+
+  Unsigned numbers are often used in situations where negative values are not relevant or meaningful. They can represent quantities, indices, counts, and other values that are always positive or  
+  zero.
     
 ![Screenshot from 2023-08-19 11-56-34](https://github.com/mrdunker/RISC-V_based_MYTH_IIIITB/assets/38190245/64d3197c-7010-4473-9013-42cb67cc59d0)
 	
@@ -174,6 +182,17 @@ In the above screenshot, if we subtract '**00000000000100e0**'(end of main) and 
    <br />
    the total number of representations = **2^16**<br />
    0 -> (2^16 -1)<br />
+
+   ### Signed Numbers
+   <br />
+   Signed numbers are a type of integer representation that includes both positive and negative integers. In computer systems, signed numbers are represented using various methods to indicate the 
+   sign and magnitude of the number.
+   <br />
+   Two's complement is the most widely used method for representing signed integers in computers. In this method, the leftmost bit (the most significant bit) is the sign bit. A value of 0 in the 
+   sign bit represents a positive number, and a value of 1 represents a negative number. The remaining bits represent the magnitude of the number in binary form.
+   <br /><br />
+   To negate a number in two's complement, you invert all the bits (change 0s to 1s and vice versa) and then add 1 to the result. This method simplifies arithmetic operations and eliminates the 
+   need for a separate subtraction circuit.
    
 
 </details>
