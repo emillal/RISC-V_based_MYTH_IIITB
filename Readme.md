@@ -221,6 +221,26 @@ int main()
 The output is given below in sequential order.<br />
 ![Screenshot from 2023-08-19 13-10-09](https://github.com/mrdunker/RISC-V_based_MYTH_IIIITB/assets/38190245/5f4c5dfd-57b1-430f-9b67-67af49ae30a6)
 
+### LAB 3B
+
+Here we are going to execute the following code.<br />
+
+```
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    long long int max = (long long int)(pow(2,63)-1);        //will display the max number
+    long long int min = (long long int)(pow(2,63) * -1);     //will display the min number
+    printf("highest number represented by long long int is %lld\n",max);
+    printf("lowest number represented by long long int is %lld\n",min);
+    return 0;
+}
+```
+The below screenshot shows the output of the same.<br />
+
+![Screenshot from 2023-08-19 14-41-36](https://github.com/mrdunker/RISC-V_based_MYTH_IIIITB/assets/38190245/7456d5d9-b8a3-4ad5-ade7-f10906029213)
+
 	
 </details>
 
