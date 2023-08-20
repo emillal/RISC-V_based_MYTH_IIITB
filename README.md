@@ -514,9 +514,17 @@ A basic circuit design implementing a [Fibonacci series](images/fibbanochi.png) 
 Also, a free-running counter having the following design is implemented. <br /><br />
 ![freerncntr](images/freerncntr.png)
 <br />
-Click on [code](codes/freecounter.tlv) to get the tlv code for the free running counter.<br />
+Right-click open the [code](codes/freecounter.tlv) to get the tlv code for the free running counter.<br />
+<br />
+The output for the same is shown below.<br />
+![feecnte](images/feecnte.png)
 
-
+</details>
+<details>
+<summary>LAB Sequential Calculator</summary>
+<br />
+Here we are going to implement a FF to the combinational calculator we did before.<br />
+The design of the 	
 </details>
 
 # Acknowledgements
