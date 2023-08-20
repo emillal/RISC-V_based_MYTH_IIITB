@@ -524,7 +524,16 @@ The output for the same is shown below.<br />
 <summary>LAB Sequential Calculator</summary>
 <br />
 Here we are going to implement a FF to the combinational calculator we did before.<br />
-The design of the 	
+The design of the sequential calulator is like so:<br />
+<br />
+	
+![seqcalc0](images/seqcalc0.png)
+<br />
+The output of the previous clock cycle is assigned to the input1.<br />
+The tlv code is availible [here](codes/seq_calc.tlv).<br />
+<br />
+The output for the same is shown below.<br />
+![seqcalc](images/seqcalc.png)
 </details>
 
 # Acknowledgements
