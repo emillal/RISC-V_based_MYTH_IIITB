@@ -565,6 +565,18 @@ The output on Makerchip is shown below.<br />
 
 <details>
 <summary>Validity</summary>
+<br />
+First, we shall see a distance accumulator coupled with a Pythagorean pipeline as shown below.
+<br />
+	
+![validity_fig](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/2b8be32c-c1c8-4459-9cb7-b5ba42a933d2)
+<br />
+Click to view the code for the [Distance accumulator](codes/pythpipedis.tlv).<br />
+<br />
+The output for it generated in MakerChip is given below.<br />
+![validity_ss](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/c107b55d-b483-48e4-9cc4-bd600eb671cc)
+
+
 </details>
 
 # Acknowledgements
