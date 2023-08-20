@@ -559,7 +559,7 @@ Click to view the [code](codes/calc_pipe.tlv).<br />
 <br />
 The output on Makerchip is shown below.<br />
 
-![pipelining_out](images/pipelining_out.png)
+![pipelining _out](images/pipelining _out.png)
  
 </details>
 
