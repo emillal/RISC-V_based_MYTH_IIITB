@@ -594,7 +594,6 @@ The design we have to implement is given below.<br />
 ![memory1](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/7cb28928-cdd6-4ea2-8916-1d391c93bb8a)
 
 Click here to [open code](codes/memvalid.tlv).<br />
-
 <br />
 The output in Makerchip is given below.<br />
 
