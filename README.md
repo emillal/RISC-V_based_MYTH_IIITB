@@ -600,6 +600,37 @@ The output in Makerchip is given below.<br />
 ![memory2](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/d6a9d091-b597-4b76-bc32-22d5bb95b0f9)
 
 </details>
+<details>
+<summary>Wrapping up</summary>
+<br />
+Here we are just going to look at some special codes.<br />
+
+ ## Conways Game of life
+
+ The Game of Life, also known simply as "Life," is a cellular automaton devised by mathematician John Conway in 1970. It's not a traditional game with players,  
+ but rather a simulation that follows a set of rules to create patterns and behaviours.<br />
+<br />
+The Game of Life takes place on an infinite grid of cells, each of which can be in one of two states: alive or dead. The state of each cell evolves over discrete 
+time steps based on its current state and the states of its eight neighbouring cells. The evolution is determined by the following rules:<br />
+
+1. Any live cell with fewer than two live neighbours dies as if caused by underpopulation.
+2. Any live cell with two or three live neighbours survives to the next generation.
+3. Any live cell with more than three live neighbours dies, as if by overpopulation.
+4. Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
+<br />
+
+![game of life](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/af85a40f-55dc-4e5d-b646-da0cab33b20d)
+<br />
+
+## Pythagoras's theorem
+
+![Screenshot from 2023-08-20 21-14-23](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/cd1ea4d4-5c81-43e3-b03b-2270d701bece)
+<br />
+The output on Makechip is :<br /> 
+![pygorus](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/c5c3abd0-087c-4e22-bc04-ee5f50fd869b)
+
+
+</details>
 
 # Acknowledgements
 - [Kunal Ghosh](https://github.com/kunalg123), Co-founder, VSD Corp. Pvt. Ltd.
