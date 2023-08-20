@@ -536,6 +536,21 @@ The output for the same is shown below.<br />
 ![seqcalc](images/seqcalc.png)
 </details>
 
+<details>
+<summary>Pipeling Logic</summary>
+<br />
+Here firstly we are trying to make the following pipeline and see the output wavform.<br />
+	
+![err](images/err.png)
+<br />
+Click to view the [code](codes/pipelining.tlv). <br />
+The ouput in Makerchip is shown below.<br />
+
+![error](images/error.png)
+
+ 
+</details>
+
 # Acknowledgements
 - [Kunal Ghosh](https://github.com/kunalg123), Co-founder, VSD Corp. Pvt. Ltd.
 - [Steve Hoover](https://github.com/stevehoover), Founder, Redwood EDA
