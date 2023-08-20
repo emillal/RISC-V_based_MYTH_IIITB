@@ -508,6 +508,14 @@ The code for this [here](codes/comibational_calc.tlv) and the output is shown as
 
 ## Sequential Logic
 
+Sequential Circuits will always use a clock. The basic element required for a circuit to be sequential is a D-FF. The DFF transitions<br />
+to the next state on the positive edge of the clock.<br />
+A basic circuit design implementing a [Fibonacci series](images/fibbanochi.png) is done on Makerchip.<br />
+Also, a free-running counter(codes) having the following design is implemented. <br />
+![freerncntr](images/freerncntr.png)
+
+
+
 </details>
 
 # Acknowledgements
