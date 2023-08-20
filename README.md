@@ -597,6 +597,7 @@ Click here to [open code](codes/memvalid.tlv).<br />
 
 <br />
 The output in Makerchip is given below.<br />
+
 ![memory2](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/d6a9d091-b597-4b76-bc32-22d5bb95b0f9)
 
 </details>
