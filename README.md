@@ -588,6 +588,16 @@ Click here to open the [code](codes/calcvalid.tlv)<br />
 The output in Makerchip is given below.<br />
 ![oneout](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/3a288a8f-f321-4f5c-9e99-84cef3e34c60)
 
+## Cycle Calculator with Validity and memory
+
+The design we have to implement is given below.<br />
+![memory1](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/7cb28928-cdd6-4ea2-8916-1d391c93bb8a)
+
+Click here to [open code](codes/memvalid.tlv).<br />
+
+<br />
+The output in Makerchip is given below.<br />
+![memory2](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/d6a9d091-b597-4b76-bc32-22d5bb95b0f9)
 
 </details>
 
