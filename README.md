@@ -626,10 +626,15 @@ time steps based on its current state and the states of its eight neighbouring c
 
 ![Screenshot from 2023-08-20 21-14-23](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/cd1ea4d4-5c81-43e3-b03b-2270d701bece)
 <br />
-The output on Makechip is :<br /> 
+The output on Makechip is:<br /> 
 ![pygorus](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/c5c3abd0-087c-4e22-bc04-ee5f50fd869b)
 
 
+</details>
+
+# Day 4 
+<details>
+<summary></summary>	
 </details>
 
 # Acknowledgements
