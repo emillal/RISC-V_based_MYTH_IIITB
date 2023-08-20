@@ -501,10 +501,11 @@ Now let us do a bit more of a complex combinational circuit. Let us create the f
 Below shown is a calculator which uses a mux.<br />
 
 ![combi_calc1](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/484ad7b6-742f-4ef1-9bd3-d552b0e63033)
-<br />
-The code for this here(code/)
+<br /><br />
+The code for this [here](codes/comibational_calc.tlv) and the output is shown as below.<br />
 
-	
+![combi](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/d16536c7-c161-4d90-a426-6351fcee22a0)
+
 </details>
 
 # Acknowledgements
