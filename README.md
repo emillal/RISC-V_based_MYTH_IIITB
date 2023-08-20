@@ -558,8 +558,8 @@ As shown above, the 2-cycle calculator clears the output alternatively and the o
 Click to view the [code](codes/calc_pipe.tlv).<br />
 <br />
 The output on Makerchip is shown below.<br />
+![pipelining _out](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/3bfb8a0c-54bb-47fc-bf93-a6f3386e7f19)
 
-![pipelining _out](images/pipelining _out.png)
  
 </details>
 
