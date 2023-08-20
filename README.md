@@ -563,10 +563,16 @@ The output on Makerchip is shown below.<br />
  
 </details>
 
+<details>
+<summary>Validity</summary>
+</details>
+
 # Acknowledgements
 - [Kunal Ghosh](https://github.com/kunalg123), Co-founder, VSD Corp. Pvt. Ltd.
 - [Steve Hoover](https://github.com/stevehoover), Founder, Redwood EDA
-- [Shivani Shah](https://github.com/shivanishah269), IIIT-Bangalore
+- [Shivani Shah](https://github.com/shivanishah269),Senior,IIIT-Bangalore
+- [Kanish R](https://github.com/KanishR1),Colleague,IIIT-Bangalore
+- [Alwin Shaju](https://github.com/alwinshaju08),Colleague,IIIT-Bangalore
   
 # References
 
