@@ -484,9 +484,25 @@ The most common logic gates are:<br />
 ## Makerchip
 [Makerchip](https://makerchip.com/) is an online platform that provides an integrated development environment (IDE) for digital design and verification using 
 SystemVerilog and TL  Verilog. It allows engineers, students, and enthusiasts to design and simulate digital circuits, develop RTL (Register Transfer Level) 
-code, and explore hardware design concepts without requiring the local installation of tools.
+code, and explore hardware design concepts without requiring the local installation of tools.<br />
 
- 
+To Familiarize oneself with the IDE there are tutorials on the platform where we can experiment.<br />
+
+## Combinational Logic
+
+For this, I have started with a basic inverter logic program, logical operations and a multi-bit mux program. Here we are using Transitional Level Verilog(TL-V), which is quite different from standard verilog code, syntax varies quite a bit. There is no need to declare ```$out``` and ```$in``` unlike Verilog. There is also no need to assign ```$in```. A random stimulus is provided, and a warning is produced.<br />
+
+Attaching a couple of outputs for reference:<br />
+![invertor](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/d0c8752d-0483-4969-96d9-fb8b40edc82f)
+<br />
+<br />
+
+Now let us do a bit more of a complex combinational circuit. Let us create the following circuit.<br />
+Below shown is a calculator which uses a mux.<br />
+
+![combi_calc1](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/484ad7b6-742f-4ef1-9bd3-d552b0e63033)
+<br />
+The code for this here(code/)
 
 	
 </details>
