@@ -490,9 +490,9 @@ To Familiarize oneself with the IDE there are tutorials on the platform where we
 
 ## Combinational Logic
 
-For this, I have started with a basic inverter logic program, logical operations and a [multi-bit mux program](images/mux2.png). Here we are using Transitional Level Verilog(TL-V), which is quite different from standard verilog code, syntax varies quite a bit. There is no need to declare ```$out``` and ```$in``` unlike Verilog. There is also no need to assign ```$in```. A random stimulus is provided, and a warning is produced.<br />
+For this, I have started with a basic inverter logic program, [logical operations](images/combinational.png) and a [multi-bit mux program](images/mux2.png). Here we are using Transitional Level Verilog(TL-V), which is quite different from standard verilog code, syntax varies quite a bit. There is no need to declare ```$out``` and ```$in``` unlike Verilog. There is also no need to assign ```$in```. A random stimulus is provided, and a warning is produced.<br />
 
-Attaching a couple of outputs for reference:<br />
+Attaching output of the inverter in Makerchip IDE for reference:<br />
 ![invertor](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/d0c8752d-0483-4969-96d9-fb8b40edc82f)
 <br />
 <br />
