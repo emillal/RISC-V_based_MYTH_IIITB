@@ -548,6 +548,18 @@ The output in Makerchip is shown below.<br />
 
 ![error](images/error.png)
 
+## Two-cycle calculator
+
+We are required to write code and view the waveform of the below design.<br />
+
+![calc_pipeline](images/calc_pipeline.png)
+<br />
+As shown above, the 2-cycle calculator clears the output alternatively and the output of given inputs is observed at the next cycle.<br />
+Click to view the [code](codes/calc_pipe.tlv).<br />
+<br />
+The output on Makerchip is shown below.<br />
+
+![pipelining_out](images/pipelining_out.png)
  
 </details>
 
