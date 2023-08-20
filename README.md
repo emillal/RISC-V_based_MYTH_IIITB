@@ -506,6 +506,8 @@ The code for this [here](codes/comibational_calc.tlv) and the output is shown as
 
 ![combi](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/d16536c7-c161-4d90-a426-6351fcee22a0)
 
+## Sequential Logic
+
 </details>
 
 # Acknowledgements
