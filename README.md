@@ -558,9 +558,9 @@ As shown above, the 2-cycle calculator clears the output alternatively and the o
 Click to view the [code](codes/calc_pipe.tlv).<br />
 <br />
 The output on Makerchip is shown below.<br />
-![pipelining _out](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/3bfb8a0c-54bb-47fc-bf93-a6f3386e7f19)
 
- 
+![cyclepipe](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/09d3fe0b-18ce-433b-91d2-fd5d3c2adb8f)
+
 </details>
 
 <details>
@@ -575,6 +575,18 @@ Click to view the code for the [Distance accumulator](codes/pythpipedis.tlv).<br
 <br />
 The output for it generated in MakerChip is given below.<br />
 ![validity_ss](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/c107b55d-b483-48e4-9cc4-bd600eb671cc)
+<br />
+
+## Cycle Calculator with Validity
+
+The following design is what we are required to create.<br />
+![one](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/b2b97e94-e7c3-473e-b84d-603bae7f8984)
+<br />
+
+Click here to open the [code](codes/calcvalid.tlv)<br />
+<br />
+The output in Makerchip is given below.<br />
+![oneout](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/3a288a8f-f321-4f5c-9e99-84cef3e34c60)
 
 
 </details>
