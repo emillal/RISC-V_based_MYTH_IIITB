@@ -773,6 +773,18 @@ The output of the same in Makerchip is given below:<br />
 ![3](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/e3e3828c-9466-49fc-9de8-148bb38b8df6)
 <br />
 
+## Fetch
+
+Instruction fetch is the initial stage of the instruction processing pipeline in a RISC-V processor.<br />
+In this stage, the processor retrieves the instruction located at the memory address pointed to by the Program Counter (PC),<br />
+and prepares it for further processing.<br />
+
+The below diagram is what we need to implement in this step.<br />
+
+![4](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/133bd16d-6151-478e-a7aa-21235408b9eb)
+
+
+
 </details>
 
 # Acknowledgements
