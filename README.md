@@ -819,11 +819,11 @@ The [code](codes/day4/fetch_issue.tlv) we have to change is:
                       
 ```
 
-The output as shown on Makechip is:<br />
+The output as shown on Makerchip is:<br />
 
 ![5](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/30e90461-45a4-4199-a8ea-f219e66ee766)
 
-The corrected Fetch code block is :<br />
+The corrected Fetch code block is:<br />
 
 ![6](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/ec5e8fed-ff90-4816-a6ef-fa9ac487e38f)
 
@@ -857,7 +857,7 @@ The corrected Fetch code block is :<br />
    
    m4+cpu_viz(@4)    // For visualisation, argument should be at least equal to the last stage of CPU logic
 ```
-The output as shown on Makechip is:<br />
+The output as shown on Makerchip is:<br />
 
 ![7](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/16e79426-fff8-4546-bf1e-3242e2c63ec2)
 ![Screenshot from 2023-08-21 15-41-46](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/b3bb0d72-9473-4dac-a3c1-610eb62493ec)
@@ -903,7 +903,7 @@ The [code](codes/day4/itypedecode.tlv) for this is.<br />
          
          $is_b_instr = $instr[6:2] ==? 5'b11000;
 ```
-The output as shown on Makechip is:<br />
+The output as shown on Makerchip is:<br />
 ![11](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/c694de14-7a09-426c-90c1-f82d0fc6b8a6)
 <br />
 
@@ -922,7 +922,7 @@ The code below is added.<br />
 	              					32'b0;
 ```
 
-The output as shown on Makechip is:<br />
+The output as shown on Makerchip is:<br />
 ![13](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/8dcb5c55-afd2-42c0-9c04-e786ca79d9ac)
 <br />
 
@@ -943,7 +943,7 @@ Using the code below.<br />
          $func3[2:0] = $instr[14:12];
          
 ```
-The output as shown on Makechip is:<br />
+The output as shown on Makerchip is:<br />
 ![15](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/14a03f17-43bd-4bec-a83c-95c9b8e503c7)
 
 ## Lab to Decode Instruction field based on the Instruction type
@@ -976,7 +976,7 @@ Using the code below.<br />
             $rd[4:0] = $instr[11:7];
 ```
 
-The output as shown on Makechip is:<br />
+The output as shown on Makerchip is:<br />
 ![17](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/5c5578fd-b053-41f7-ab35-a4f82fd09f14)
 
 ## Lab on individual decode
@@ -1000,7 +1000,7 @@ Here we are going to try to get the instructions that are circled in red.<br />
          
 ```
 
-The output as shown on Makechip is:<br />
+The output as shown on Makerchip is:<br />
 
 ![19](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/d7ee9cc8-e49c-4416-b9cd-4d5a3d18f4e3)
 ![20](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/404d31a2-d57e-4e05-a048-1ce76cdba613)
