@@ -661,6 +661,7 @@ The block diagram of a basic RISC-V microarchitecture is shown in the figure bel
 <br />
 Using the Makerchip platform the implementation of the RISC-V microarchitecture or core is done.<br /> 
 For starting the implementation a starter code present here is used. The starter code shell consists of:
+
 1. RISC-V Assembler
 2. Test program
 3. Visualization(Viz)
