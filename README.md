@@ -1009,6 +1009,30 @@ Click [here](codes/day4/fetchdecode.tlv) to view the final code for fetch and de
 
 </details>
 
+<details>
+<summary>RISC-V Control Logic</summary>
+</details>
+
+## Execute and Register file read/write
+
+Here we are going to  'read from' and 'write into' the registers.<br />
+2 read and write operations can be carried out simultaneously here.<br />
+![1](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/b70bb689-6570-4a32-a5d4-b910767c3738)
+<br />
+We are going to use the below code.<br />
+
+```
+	 $rf_wr_en = 1'b0;
+         $rf_wr_index[4:0] = 5'b0;
+         $rf_wr_data[31:0] = 32'b0;
+         $rf_rd_en1 = $rs1_valid;
+         $rf_rd_index1[4:0] = $rs1;
+         $rf_rd_en2 = $rs2_valid;
+         $rf_rd_index2[4:0] = $rs2;
+         
+```
+
+
 # Acknowledgements
 - [Kunal Ghosh](https://github.com/kunalg123), Co-founder, VSD Corp. Pvt. Ltd.
 - [Steve Hoover](https://github.com/stevehoover), Founder, Redwood EDA
