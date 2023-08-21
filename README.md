@@ -649,15 +649,22 @@ the processor manufacturer. Different companies and research institutions may de
 tailored to specific use cases and performance goals.<br />
 <br />
 Here we are designing the basic processor of 3 stages fetch, decode and execute based on RISC-V ISA.<br />
+For starting the implementation a starter code is present in the below link.<br />
+
+```
+https://github.com/stevehoover/RISC-V_MYTH_Workshop
+```
 The block diagram of a basic RISC-V microarchitecture is shown in the figure below.<br />
+
 ![Screenshot from 2023-08-21 14-22-08](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/a21a64c1-ca8d-41df-a51f-8f2fc295ec95)
+
 <br />
 Using the Makerchip platform the implementation of the RISC-V microarchitecture or core is done.<br /> 
 For starting the implementation a starter code present here is used. The starter code shell consists of:
 1. RISC-V Assembler
 2. Test program
 3. Visualization(Viz)
-4. Commented code for register file and memory.
+4. Commented code for register, file and memory.
      
 </details>
 
