@@ -905,6 +905,30 @@ The [code](codes/day4/itypedecode.tlv) for this is.<br />
 ```
 The output as shown on Makechip is:<br />
 ![11](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/c694de14-7a09-426c-90c1-f82d0fc6b8a6)
+<br />
+
+## Instruction immediate decode
+
+![12](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/08c2b69d-2819-46e7-92c8-ee79cdafb20f)
+
+The code below is added.<br />
+
+```
+      $imm[31:0] = $is_i_instr ? {{21{$instr[31]}}, $instr[30:20]} :
+ 		$is_s_instr ? {{21{$instr[31]}}, $instr[30:25], $instr[11:7]} :
+			 $is_b_instr ? {{20{$instr[31]}}, $instr[7], $instr[30:25], $instr[11:8], 1'b0} :
+				 $is_u_instr ? {$instr[31:12], 12'b0} :
+ 					 $is_j_instr ? {{12{$instr[31]}}, $instr[19:12], $instr[20], $instr[30:21], 1'b0} :
+	              					32'b0;
+```
+
+The output as shown on Makechip is:<br />
+![13](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/8dcb5c55-afd2-42c0-9c04-e786ca79d9ac)
+<br />
+
+## Lab to extract other instruction fields
+
+
 
 </details>
 
