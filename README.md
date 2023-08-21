@@ -1079,6 +1079,64 @@ The output as shown on Makerchip is:<br />
 
 ![6](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/b0812d86-d95f-420b-b07a-0455900809c0)
 
+## Arrays
+
+Arrays in RISC-V, as in most other computer architectures, are collections of elements of the same data type stored in contiguous memory locations.
+RISC-V processors support arrays through their memory access instructions and addressing modes.
+In the RISC-V architecture, arrays are commonly managed using a combination of memory locations and registers.<br /><br />
+Typically, arrays are stored within memory, with each element occupying a specific memory address. This setup enables the processor to utilize load and store 
+instructions for interacting with array elements.<br /><br />
+Alternatively, if an array is relatively small and can fit within the available registers, elements can be partially stored in registers. This strategy, in 
+situations where feasible, can yield enhanced performance for certain operations due to the swifter nature of 
+register access compared to memory access.<br /><br />
+In essence, the RISC-V register file encompasses an assemblage of registers designated for swift data access and temporary data storage, while arrays encompass 
+collections of elements that can be accommodated either within memory or registers. These arrays are manipulated via a spectrum of instructions, including load, 
+store, and computational directives.<br /><br />
+
+![Screenshot from 2023-08-21 20-30-08](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/a31c6a42-8413-40c7-ae28-22b201dc9321)
+<br />
+
+## Lab For Implementing Branch Instructions
+
+Moving forward in the construction of the RISC-V microarchitecture involves the incorporation of branching mechanisms. In addition to straightforward immediate 
+additions or regular additions, specific conditions might necessitate redirecting the Program Counter (PC) to a designated branch target address. At this 
+juncture, we have introduced a range of branch instructions and accordingly updated the PC, factoring in various conditional scenarios.<br />
+Some Branching Instructions are :
+1. BEQ;==
+2. BNE:!=
+3. BLT: (x1 < ×2) ^ (x1[311!=×2[311)
+4. BGE: (×1 >= ×2) ^ (x1[31]!=×2[31])
+5. BLTU: <
+6. BGEU: >=
+
+<br />
+
+![Screenshot from 2023-08-21 20-48-25](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/56e39de1-1a8b-4c7c-a663-34a07d725b5e)
+<br />
+<br />
+The code below is implemented into the main code:<br />
+```
+	   $taken_branch = $is_beq ? ($src1_value == $src2_value):
+                         $is_bne ? ($src1_value != $src2_value):
+                         $is_blt ? (($src1_value < $src2_value) ^ ($src1_value[31] != $src2_value[31])):
+                         $is_bge ? (($src1_value >= $src2_value) ^ ($src1_value[31] != $src2_value[31])):
+                         $is_bltu ? ($src1_value < $src2_value):
+                         $is_bgeu ? ($src1_value >= $src2_value):
+                                    1'b0;
+         `BOGUS_USE($taken_branch)
+         
+         `BOGUS_USE($taken_branch)
+```
+
+The output as shown on Makerchip is:<br />
+![Screenshot from 2023-08-21 20-44-18](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/3582ec69-40d8-402b-97ec-cee8e7ff06f2)
+<br />
+
+## Lab For Complementing Branch Instructions
+
+
+
+
 </details>
 
 
