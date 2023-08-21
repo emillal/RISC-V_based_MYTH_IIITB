@@ -1134,12 +1134,34 @@ The output as shown on Makerchip is:<br />
 
 ## Lab For Complementing Branch Instructions
 
+The below design change is made.<br />
+
+![Screenshot from 2023-08-21 20-58-09](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/21d650a5-156c-4165-9cf7-976da19d6c37)
 
 
+The code below is implemented into the main code:<br />
+```
+	$br_target_pc[31:0] = $pc + $imm;
+```
+
+The output as shown on Makerchip is:<br />
+![Screenshot from 2023-08-21 20-56-12](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/9116c6b4-5139-40d8-b0a4-4f43b797b428)
+<br />
+
+## Lab For Testbench
+
+The code below is implemented into the main code:<br />
+
+```
+*passed = |cpu/xreg[10]>>5$value == (1+2+3+4+5+6+7+8+9) ;
+
+```
+The output as shown on Makerchip is:<br />
+![Screenshot from 2023-08-21 21-07-40](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/0b72d690-8963-4df6-b248-3dbf411eb503)
+
+The final code for this module can be viewed [here](codes/day4/day4till.tlv).<br />
 
 </details>
-
-
 
 
 # Acknowledgements
