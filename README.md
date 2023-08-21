@@ -669,6 +669,17 @@ For starting the implementation a starter code present here is used. The starter
      
 </details>
 
+<details>
+<summary>Fetch and Decode</summary>
+<br />
+Here we are going to design a simple RISC-V Core CPU as per the below diagram.<br />
+
+![1](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/6fff90c6-20dc-47d8-868a-14efae9e309e)
+
+The [sample template](codes/day4/template.tlv) is given below.<br />
+
+</details>
+
 # Acknowledgements
 - [Kunal Ghosh](https://github.com/kunalg123), Co-founder, VSD Corp. Pvt. Ltd.
 - [Steve Hoover](https://github.com/stevehoover), Founder, Redwood EDA
