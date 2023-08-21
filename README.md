@@ -1,4 +1,4 @@
-# RISC-V based MYTH
+![image](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/419fb521-790d-4f37-9eab-6620d02629e8)# RISC-V based MYTH
 This repository summarises work done on the RISC-V workshop hosted by **Kunal Ghosh** of VSD Corp. Pvt. Ltd.<br />
 
 # Day 1
@@ -928,7 +928,84 @@ The output as shown on Makechip is:<br />
 
 ## Lab to extract other instruction fields
 
+Here we are going to try to extract other instruction fields such as $funct7 , $funct3, $rs1 ,$rs2 ,$rd, $opcode.<br />
 
+![14](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/0827159f-e653-4086-aefb-ef56b7f69d89)
+<br />
+Using the code below.<br />
+
+```
+	 $rs2[4:0] = $instr[24:20];
+         $rs1[4:0] = $instr[19:15];
+         $rd[4:0]  = $instr[11:7];
+         $opcode[6:0] = $instr[6:0];
+         $func7[6:0] = $instr[31:25];
+         $func3[2:0] = $instr[14:12];
+         
+```
+The output as shown on Makechip is:<br />
+![15](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/14a03f17-43bd-4bec-a83c-95c9b8e503c7)
+
+## Lab to Decode Instruction field based on the Instruction type
+Here we are going to try to extract other instruction fields such as $funct7 , $funct3, $rs1 ,$rs2 ,$rd, $opcode based on the instruction type.<br />
+
+![16](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/84319796-7621-4e7a-a3d0-d9510c7f75ca)
+
+Using the code below.<br />
+
+```
+
+	$rs2_valid = $is_r_instr || $is_s_instr || $is_b_instr;
+         ?$rs2_valid
+            $rs2[4:0] = $instr[24:20];
+            
+         $rs1_valid = $is_r_instr || $is_i_instr || $is_s_instr || $is_b_instr;
+         ?$rs1_valid
+            $rs1[4:0] = $instr[19:15];
+         
+         $funct3_valid = $is_r_instr || $is_i_instr || $is_s_instr || $is_b_instr;
+         ?$funct3_valid
+            $funct3[2:0] = $instr[14:12];
+            
+         $funct7_valid = $is_r_instr ;
+         ?$funct7_valid
+            $funct7[6:0] = $instr[31:25];
+            
+         $rd_valid = $is_r_instr || $is_i_instr || $is_u_instr || $is_j_instr;
+         ?$rd_valid
+            $rd[4:0] = $instr[11:7];
+```
+
+The output as shown on Makechip is:<br />
+![17](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/5c5578fd-b053-41f7-ab35-a4f82fd09f14)
+
+## Lab on individual decode
+
+Here we are going to try to get the instructions that are circled in red.<br />
+
+![18](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/144df4f5-b705-4c36-9a98-10d57c39b1f8)
+
+
+```
+
+	 $dec_bits [10:0] = {$funct7[5], $funct3, $opcode};
+         $is_beq = $dec_bits ==? 11'bx_000_1100011;
+         $is_bne = $dec_bits ==? 11'bx_001_1100011;
+         $is_blt = $dec_bits ==? 11'bx_100_1100011;
+         $is_bge = $dec_bits ==? 11'bx_101_1100011;
+         $is_bltu = $dec_bits ==? 11'bx_110_1100011;
+         $is_bgeu = $dec_bits ==? 11'bx_111_1100011;
+         $is_addi = $dec_bits ==? 11'bx_000_0010011;
+         $is_add = $dec_bits ==? 11'b0_000_0110011;
+         
+```
+
+The output as shown on Makechip is:<br />
+
+![19](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/d7ee9cc8-e49c-4416-b9cd-4d5a3d18f4e3)
+![20](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/404d31a2-d57e-4e05-a048-1ce76cdba613)
+
+Click [here](codes/day4/fetchdecode.tlv) to view the final code for fetch and decode.
 
 </details>
 
