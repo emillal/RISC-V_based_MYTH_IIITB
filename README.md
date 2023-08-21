@@ -759,7 +759,7 @@ The PC is a crucial component of the processor's control flow, as it determines 
 
 ![2](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/56e3906a-ff28-4594-afc3-f88d53aa7e9d)
 <br />
-The below piece of code is implemented.<br />
+The below piece of [code](codes/day4/pc.tlv) is implemented.<br />
 
 ```
 |cpu
@@ -768,7 +768,10 @@ The below piece of code is implemented.<br />
          
          $pc[31:0] = >>1$reset ? 32'b0 : >>1$pc + 32'd4;
 ```
-The out
+The output of the same in Makerchip is given below:<br />
+
+![3](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/e3e3828c-9466-49fc-9de8-148bb38b8df6)
+<br />
 
 </details>
 
