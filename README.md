@@ -273,9 +273,9 @@ The below screenshot shows the output of the same.<br />
   <br />
   ## What is XLEN?
   <br />
-  'XLEN' typically refers to the **X Register Length**. The XLEN value represents the number of bits in the general-purpose registers, which are used for 
+  'XLEN' typically refers to the X Register Length. The XLEN value represents the number of bits in the general-purpose registers, which are used for 
   storing data and performing computations. In a RISC-V system with a 32-bit XLEN, the general-purpose registers would be 32 bits wide.<br /> 
-  Similarly, **in a RISC-V system with a 64-bit XLEN, the general-purpose registers would be 64 bits wide**. The XLEN value has a significant impact on the 
+  Similarly, in a RISC-V system with a 64-bit XLEN, the general-purpose registers would be 64 bits wide. The XLEN value has a significant impact on the 
   performance, memory-addressing capabilities, and overall capabilities of the processor.<br />
   A larger XLEN allows for more addressable memory space and potentially more complex computations. However, it also comes with increased hardware. The XLEN 
   value has a significant impact on the performance, memory-addressing capabilities, and overall capabilities of the processor. <br />
