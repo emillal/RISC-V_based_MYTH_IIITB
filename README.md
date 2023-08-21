@@ -1040,7 +1040,44 @@ The output as shown on Makerchip is:<br />
 
 ![2](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/ed7af5fd-4385-4bec-a6e9-7b2a52efae07)
 
+## LAB on ALU
 
+We are going to follow the design below:<br />
+
+![3](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/08520a19-59a0-46b5-b2a6-b844fe3a15a3)
+<br />
+
+ The following code is added to the tvl code.<br />
+
+ ```
+ 	$result[31:0] = $is_addi ? $src1_value + $imm :
+                         $is_add ? $src1_value + $src2_value :
+                         32'bx ;
+ ```
+The output as shown on Makerchip is:<br />
+
+![4](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/0a1194b7-cb70-424d-9c6c-38b0ffec5bf3)
+<br />
+
+## Lab On Register File Write
+
+We are going to follow the design below:<br />
+We just need to hook up the write control registers and the data we need to write.<br />
+
+![5](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/4de80665-ebcc-4959-a255-91fd7c84dae8)
+<br />
+
+The following code is added to the tvl code.<br />
+
+```
+	 $rf_wr_en = $rd_valid && $rd != 5'b0;
+         $rf_wr_index[4:0] = $rd;
+         $rf_wr_data[31:0] = $result;
+```
+
+The output as shown on Makerchip is:<br />
+
+![6](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/b0812d86-d95f-420b-b07a-0455900809c0)
 
 </details>
 
