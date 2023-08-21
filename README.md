@@ -1,4 +1,4 @@
-![image](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/419fb521-790d-4f37-9eab-6620d02629e8)# RISC-V based MYTH
+# RISC-V based MYTH
 This repository summarises work done on the RISC-V workshop hosted by **Kunal Ghosh** of VSD Corp. Pvt. Ltd.<br />
 
 # Day 1
