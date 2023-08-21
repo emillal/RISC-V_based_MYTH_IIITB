@@ -862,7 +862,49 @@ The output as shown on Makechip is:<br />
 ![7](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/16e79426-fff8-4546-bf1e-3242e2c63ec2)
 ![Screenshot from 2023-08-21 15-41-46](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/b3bb0d72-9473-4dac-a3c1-610eb62493ec)
 
+## Decode
+The instruction decode stage is the second stage in the instruction processing pipeline of a RISC-V processor.<br />
+In this stage, the fetched instruction is decoded to determine its operation, operands, and any immediate values associated with it.<br />
+The instruction decode stage prepares the instruction for execution by the subsequent stages of the pipeline.<br />
+There are 6 instructions type in RISC-V :
 
+1. Register (R) type
+2. Immediate (I) type
+3. Store (S) type
+4. Branch (B) type
+5. Upper immediate (U) type
+6. Jump (J) type
+
+![Screenshot from 2023-08-21 15-48-45](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/4bc900d9-e2b8-411b-a409-b9d1d585a163)
+<br />
+
+Instruction type decode: <br />
+
+![19](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/19a26909-e3ae-42de-bfa0-4a4fcae20306)
+<br />
+The [code](codes/day4/itypedecode.tlv) for this is.<br /> 
+
+```
+
+@1
+         $is_u_instr = $instr[6:2] ==? 5'b0x101;
+         
+         $is_s_instr = $instr[6:2] ==? 5'b0100x;
+         
+         $is_r_instr = $instr[6:2] ==? 5'b01011 ||
+                       $instr[6:2] ==? 5'b011x0 ||
+                       $instr[6:2] ==? 5'b10100;
+         
+         $is_j_instr = $instr[6:2] ==? 5'b11011;
+         
+         $is_i_instr = $instr[6:2] ==? 5'b0000x ||
+                       $instr[6:2] ==? 5'b001x0 ||
+                       $instr[6:2] ==? 5'b11001;
+         
+         $is_b_instr = $instr[6:2] ==? 5'b11000;
+```
+The output as shown on Makechip is:<br />
+![11](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/c694de14-7a09-426c-90c1-f82d0fc6b8a6)
 
 </details>
 
