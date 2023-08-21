@@ -782,6 +782,85 @@ and prepares it for further processing.<br />
 The below diagram is what we need to implement in this step.<br />
 
 ![4](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/133bd16d-6151-478e-a7aa-21235408b9eb)
+<br />
+
+The [code](codes/day4/fetch_issue.tlv) we have to change is:
+
+```
+
+|cpu
+      @0
+         $reset = *reset;
+         
+         $pc[31:0] = >>1$reset ? 32'b0 : >>1$pc + 32'd4;
+         
+         
+         
+      // Note: Because of the magic we are using for visualisation, if visualisation is enabled below,
+      //       be sure to avoid having unassigned signals (which you might be using for random inputs)
+      //       other than those specifically expected in the labs. You'll get strange errors for these.
+
+   
+   // Assert these to end simulation (before Makerchip cycle limit).
+   *passed = *cyc_cnt > 40;
+   *failed = 1'b0;
+   
+   // Macro instantiations for:
+   //  o instruction memory
+   //  o register file
+   //  o data memory
+   //  o CPU visualization
+   |cpu
+      m4+imem(@1)    // Args: (read stage)
+      //m4+rf(@1, @1)  // Args: (read stage, write stage) - if equal, no register bypass is required
+      //m4+dmem(@4)    // Args: (read/write stage)
+   
+   m4+cpu_viz(@4)    // For visualisation, argument should be at least equal to the last stage of CPU logic
+                      
+```
+
+The output as shown on Makechip is:<br />
+
+![5](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/30e90461-45a4-4199-a8ea-f219e66ee766)
+
+The corrected Fetch code block is :<br />
+
+![6](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/ec5e8fed-ff90-4816-a6ef-fa9ac487e38f)
+
+```
+|cpu
+      @0
+         $reset = *reset;
+         
+         $pc[31:0] = >>1$reset ? 32'b0 : >>1$pc + 32'd4;
+      @1
+         $imem_rd_addr[M4_IMEM_INDEX_CNT-1:0] = $pc[M4_IMEM_INDEX_CNT+1:2];
+         $imem_rd_en = !$reset;
+         $instr[31:0] = $imem_rd_data[31:0];
+      ?$imem_rd_en
+         @1
+            $imem_rd_data[31:0] = /imem[$imem_rd_addr]$instr;
+
+// Assert these to end simulation (before Makerchip cycle limit).
+   *passed = *cyc_cnt > 40;
+   *failed = 1'b0;
+   
+   // Macro instantiations for:
+   //  o instruction memory
+   //  o register file
+   //  o data memory
+   //  o CPU visualization
+   |cpu
+      m4+imem(@1)    // Args: (read stage)
+      //m4+rf(@1, @1)  // Args: (read stage, write stage) - if equal, no register bypass is required
+      //m4+dmem(@4)    // Args: (read/write stage)
+   
+   m4+cpu_viz(@4)    // For visualisation, argument should be at least equal to the last stage of CPU logic
+```
+The output as shown on Makechip is:<br />
+
+![7](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/16e79426-fff8-4546-bf1e-3242e2c63ec2)
+![Screenshot from 2023-08-21 15-41-46](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/b3bb0d72-9473-4dac-a3c1-610eb62493ec)
 
 
 
