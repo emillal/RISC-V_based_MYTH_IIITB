@@ -1011,7 +1011,6 @@ Click [here](codes/day4/fetchdecode.tlv) to view the final code for fetch and de
 
 <details>
 <summary>RISC-V Control Logic</summary>
-</details>
 
 ## Execute and Register file read/write
 
@@ -1029,8 +1028,23 @@ We are going to use the below code.<br />
          $rf_rd_index1[4:0] = $rs1;
          $rf_rd_en2 = $rs2_valid;
          $rf_rd_index2[4:0] = $rs2;
+
+	 $src1_value[31:0] = $rf_rd_data1; //new
+         $src2_value[31:0] = $rf_rd_data2;
+
+	 `BOGUS_USE ($rf_rd_data1)
+         `BOGUS_USE ($rf_rd_data2)
          
 ```
+The output as shown on Makerchip is:<br />
+
+![2](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/ed7af5fd-4385-4bec-a6e9-7b2a52efae07)
+
+
+
+</details>
+
+
 
 
 # Acknowledgements
