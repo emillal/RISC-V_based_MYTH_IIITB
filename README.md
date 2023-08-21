@@ -634,7 +634,31 @@ The output on Makechip is:<br />
 
 # Day 4 
 <details>
-<summary></summary>	
+<summary>Introduction to RISC-V microacrchitecture</summary>
+<br />
+Microarchitecture refers to the internal design and organization of a CPU that implements a particular ISA.<br />
+RISC-V CPUs can have different microarchitectures that optimize for various aspects such as performance, power efficiency, and area (size of the chip).<br />
+Here are some key features and concepts commonly found in RISC-V microarchitecture: <br />
+	
+1. Instruction Fetch (IF)
+2. Instruction Decode (ID)
+3. Execution Units
+   
+It's important to note that RISC-V is an instruction set architecture, and microarchitectures based on RISC-V can vary widely depending on the design goals of
+the processor manufacturer. Different companies and research institutions may develop their own microarchitectures that implement the RISC-V ISA in unique ways,
+tailored to specific use cases and performance goals.<br />
+<br />
+Here we are designing the basic processor of 3 stages fetch, decode and execute based on RISC-V ISA.<br />
+The block diagram of a basic RISC-V microarchitecture is shown in the figure below.<br />
+![Screenshot from 2023-08-21 14-22-08](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/a21a64c1-ca8d-41df-a51f-8f2fc295ec95)
+<br />
+Using the Makerchip platform the implementation of the RISC-V microarchitecture or core is done.<br /> 
+For starting the implementation a starter code present here is used. The starter code shell consists of:
+1. RISC-V Assembler
+2. Test program
+3. Visualization(Viz)
+4. Commented code for register file and memory.
+     
 </details>
 
 # Acknowledgements
