@@ -1015,7 +1015,7 @@ Click [here](codes/day4/fetchdecode.tlv) to view the final code for fetch and de
 ## Execute and Register file read/write
 
 Here we are going to  'read from' and 'write into' the registers.<br />
-2 read and write operations can be carried out simultaneously here.<br />
+two read and one write operations can be carried out simultaneously here.<br />
 ![1](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/b70bb689-6570-4a32-a5d4-b910767c3738)
 <br />
 We are going to use the below code.<br />
