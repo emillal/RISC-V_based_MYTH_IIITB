@@ -1181,7 +1181,7 @@ The final code for this module can be viewed [here](codes/day4/day4till.tlv).<br
 
 ## Day 5-Complete Pipelined RISC-V CPU Microarchitecture
 
-<!--<details>?
+<details>
 <summary>Pipeling the CPU </summary>
 <br />
 Pipelining of the CPU core is going to be implemented, streamlining the process of retiming and considerably reducing the occurrence of functional errors. This technique enables faster computational tasks. As previously explained, establishing the pipeline is a straightforward process of incorporating stages labelled as @1, @2, and so on. A visual representation of the pipelining setup is provided below. In TL Verilog, it's important to note that there is no strict requirement to define the pipeline stages in a specific systematic order, providing an extra layer of benefit.<br />
@@ -1289,9 +1289,9 @@ Below is the output Makerchip after including load/store instructions:<br />
 The Final Diagram is shown below.<br /> 
 ![Screenshot from 2023-08-22 17-51-30](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/fcdb0ab4-0a66-40e4-a7a5-b1d7130350ca)
 
-## [Click to view the final code](codes/calc_pipe.tlv).
+## [Click to view the final code](codes/final_riscv_arch.tlv).
 
-</details>--> 
+</details> 
 
 
 # Acknowledgements
