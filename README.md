@@ -11,6 +11,8 @@ This repository summarises work done in ASIC class on the RISC-V workshop mentor
 
 - [Day 5-Complete Pipelined RISC-V CPU Microarchitecture](#Day-5--Complete-Pipelined-RISCV-CPU-Microarchitecture)
 
+- [Acknowledgements](#Acknowledgements)
+
 - [Reference](#Reference)
  
 
