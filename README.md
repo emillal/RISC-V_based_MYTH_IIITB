@@ -1,7 +1,20 @@
 # RISC-V based MYTH
-This repository summarises work done on the RISC-V workshop hosted by **Kunal Ghosh** of VSD Corp. Pvt. Ltd.<br />
+This repository summarises work done in ASIC class on the RISC-V workshop mentored by **Kunal Ghosh** of VSD Corp. Pvt. Ltd.<br />
 
-# Day 1
+- [Day 1-Introduction to RISC-V ISA And GNU compiler toolchain ](#Day-1--Introduction-to-RISC-V-ISA-And-GNU-compiler-toolchain)
+  
+- [Day 2-Introduction to Application Binary Interface And Basic Error Flow](#Day-2--Introduction-to-Application-Binary-Interface-And-Basic-error-flow)
+
+- [Day 3-Introduction to TL Verilog and Makerchip](#Day-3--Introduction-to-TL-Verilog-and-Makerchip.)
+
+- [Day 4-Basic RISC-V CPU micro-architecture](#Day-4--Basic-RISC-V-CPU-micro-architecture)
+
+- [Day 5-Complete Pipelined RiscV CPU Microarchitecture](#Day-5--Complete-Pipelined-RiscV-CPU-Microarchitecture)
+
+- [Reference](#reference)
+ 
+
+# Day 1-Introduction to RISC-V ISA And GNU compiler toolchain
 <details>
   <summary>Introduction</summary>
   <br />
@@ -207,7 +220,7 @@ is the number of instructions within that particular block(main).<br />
 
 </details>
 <details>
-  <summary>Lab Signed and unsigned</summary>
+  <summary>Lab 3 : Signed and unsigned</summary>
   
 ### LAB 3A 
 
@@ -254,7 +267,7 @@ The below screenshot shows the output of the same.<br />
 	
 </details>
 
-# Day 2
+# Day 2-Introduction to Application Binary Interface And Basic Error Flow
 
 <details>
   <summary>Introduction to ABI and verification Flows</summary>
@@ -449,7 +462,7 @@ The below file is firmware32.hex  (bitstream).<br />
 
 </details>
 
-# Day 3
+# Day 3-Introduction to TL Verilog and Makerchip
 <details>
 <summary>Digital logic with TL-Verilog and Makerchip</summary>
 <br />
@@ -632,7 +645,7 @@ The output on Makechip is:<br />
 
 </details>
 
-# Day 4 
+# Day 4-Basic RISC-V CPU micro-architecture
 <details>
 <summary>Introduction to RISC-V microacrchitecture</summary>
 <br />
@@ -1164,7 +1177,7 @@ The final code for this module can be viewed [here](codes/day4/day4till.tlv).<br
 </details>
 
 
-# Day 5
+# Day 5-Complete Pipelined RiscV CPU Microarchitecture
 
 <!--<details>?
 <summary>Pipeling the CPU </summary>
@@ -1282,13 +1295,17 @@ The Final Diagram is shown below.<br />
 # Acknowledgements
 - [Kunal Ghosh](https://github.com/kunalg123), Co-founder, VSD Corp. Pvt. Ltd.
 - [Steve Hoover](https://github.com/stevehoover), Founder, Redwood EDA
-- [Shivani Shah](https://github.com/shivanishah269),Senior,IIIT-Bangalore
+- [Shivani Shah](https://github.com/shivanishah269),Alumni,IIIT-Bangalore
 - [Kanish R](https://github.com/KanishR1),Colleague,IIIT-Bangalore
 - [Alwin Shaju](https://github.com/alwinshaju08),Colleague,IIIT-Bangalore
   
 # References
 
 1. https://github.com/kunalg123/riscv_workshop_collaterals
+2. https://github.com/stevehoover
+3. https://github.com/shivanishah269
+4. https://redwoodeda.com
+5. https://makerchip.com/
    
 
 
