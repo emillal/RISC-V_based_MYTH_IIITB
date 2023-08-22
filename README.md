@@ -1205,6 +1205,31 @@ Pipelining is done in this step. Code is distributed and output is obtained.<br 
 
 </details>
 
+<details>
+<summary>Solutions to pipeline hazzards</summary>
+<br />
+
+### Lab for register file Bypass to address  rd-after-wr hazard
+
+![Screenshot from 2023-08-22 15-57-48](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/502ec8bd-e486-4731-89a2-772ee4198868)
+
+There should be no noticeable changes at this stage.<br />
+![Screenshot from 2023-08-22 15-53-54](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/2125cf70-9aa7-47dc-af23-39fe5430c884)
+<br />
+
+### Lab for branches to correct the branch target path
+
+
+![Screenshot from 2023-08-22 16-21-25](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/6d68722d-72b5-4014-aca3-63dc3de40249)
+
+### Lab for complete RV32I instruction set (except FENCE,ECALL, EBREAK)
+
+![Screenshot from 2023-08-22 17-19-00](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/6c9a74cf-9d36-4680-9c50-258335ffc0ce)
+
+### 
+
+</details>
+
 # Acknowledgements
 - [Kunal Ghosh](https://github.com/kunalg123), Co-founder, VSD Corp. Pvt. Ltd.
 - [Steve Hoover](https://github.com/stevehoover), Founder, Redwood EDA
