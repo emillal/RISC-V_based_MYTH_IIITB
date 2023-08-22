@@ -1230,10 +1230,11 @@ There should be no noticeable changes at this stage.<br />
 </details>
 
 <details>
-<summary>load store and data memory | Wrap up</summary>
-	
-![Screenshot from 2023-08-22 17-50-57](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/7f9f2810-766c-4091-a4a3-ac9d2fa88119)
+<summary>Load store and data memory | Wrap up</summary>
 
+Below is the output Makerchip after including load/store instructions:<br />	
+![Screenshot from 2023-08-22 17-50-57](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/7f9f2810-766c-4091-a4a3-ac9d2fa88119)
+The Final Diagram is shown below.<br /> 
 ![Screenshot from 2023-08-22 17-51-30](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/fcdb0ab4-0a66-40e4-a7a5-b1d7130350ca)
 
 Click to view the final code.
