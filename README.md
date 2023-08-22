@@ -9,7 +9,7 @@ This repository summarises work done in ASIC class on the RISC-V workshop mentor
 
 - [Day 4-Basic RISC-V CPU micro-architecture](#Day-4--Basic-RISC-V-CPU-micro-architecture)
 
-- [Day 5-Complete Pipelined RiscV CPU Microarchitecture](#Day-5--Complete-Pipelined-RiscV-CPU-Microarchitecture)
+- [Day 5-Complete Pipelined RISC-V CPU Microarchitecture](#Day-5--Complete-Pipelined-RISCV-CPU-Microarchitecture)
 
 - [Reference](#Reference)
  
@@ -1177,7 +1177,7 @@ The final code for this module can be viewed [here](codes/day4/day4till.tlv).<br
 </details>
 
 
-# Day 5-Complete Pipelined RiscV CPU Microarchitecture
+# Day 5-Complete Pipelined RISC-V CPU Microarchitecture
 
 <!--<details>?
 <summary>Pipeling the CPU </summary>
