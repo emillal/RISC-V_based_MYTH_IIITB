@@ -1226,9 +1226,20 @@ There should be no noticeable changes at this stage.<br />
 
 ![Screenshot from 2023-08-22 17-19-00](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/6c9a74cf-9d36-4680-9c50-258335ffc0ce)
 
-### 
 
 </details>
+
+<details>
+<summary>load store and data memory | Wrap up</summary>
+	
+![Screenshot from 2023-08-22 17-50-57](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/7f9f2810-766c-4091-a4a3-ac9d2fa88119)
+
+![Screenshot from 2023-08-22 17-51-30](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/fcdb0ab4-0a66-40e4-a7a5-b1d7130350ca)
+
+Click to view the final code.
+
+</details>
+
 
 # Acknowledgements
 - [Kunal Ghosh](https://github.com/kunalg123), Co-founder, VSD Corp. Pvt. Ltd.
