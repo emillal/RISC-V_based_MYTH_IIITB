@@ -1184,7 +1184,7 @@ $valid = $reset ? 1'b0 : ($start) ? 1'b1 : (>>3$valid) ;
          $start = $reset ? 1'b0 : ($start_int && !>>1$start_int);
 ```
 
-The following waveform is obtained.<br />
+The following output is obtained on MakerChip.<br />
 
 ![Screenshot from 2023-08-22 12-02-15](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/c09489d1-2a8c-4faa-b275-9f5f9bec93ce)
 <br />
@@ -1193,6 +1193,13 @@ The following waveform is obtained.<br />
 
 ![Screenshot from 2023-08-22 12-51-10](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/83a6e6fb-cb19-42e7-ad44-ab070bb24653)
 
+The code snippet required to implement is.<br />
+
+```
+ $pc[31:0] = (>>1$reset) ? 32'b0 : (>>3$valid_taken_branch) ? (>>3$br_tgt_pc) :  (>>3$int_pc)  ;
+ $valid_taken_branch = $valid && $taken_br;
+```
+
 ![Screenshot from 2023-08-22 12-49-45](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/0a672c89-7d17-4fb8-bc97-d73a9aef87fd)
 
 ### LAB to distribute logic
@@ -1200,7 +1207,8 @@ The following waveform is obtained.<br />
 Pipelining is done in this step. Code is distributed and output is obtained.<br />
 
 ![Screenshot from 2023-08-22 12-51-10](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/42860c05-ce19-40e1-aba8-0b7f9e665299)
-
+<br />
+Below given is the output on MakerChip.<br />
 ![Screenshot from 2023-08-22 13-01-57](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/bbb378be-66fe-4235-a725-9a993cfc8ef9)
 
 </details>
@@ -1211,19 +1219,33 @@ Pipelining is done in this step. Code is distributed and output is obtained.<br 
 
 ### Lab for register file Bypass to address  rd-after-wr hazard
 
+We are required to implement the logic as per the given figure.<br />
 ![Screenshot from 2023-08-22 15-57-48](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/502ec8bd-e486-4731-89a2-772ee4198868)
 
+The logic snippet required is given below.<br />
+
+```
+$src1_value[31:0] = ((>>1$rf_wr_en) && (>>1$rd == $rs1 )) ? (>>1$result): $rf_rd_data1; 
+$src2_value[31:0] = ((>>1$rf_wr_en) && (>>1$rd == $rs2 )) ? (>>1$result) : $rf_rd_data2;
+```
 There should be no noticeable changes at this stage.<br />
 ![Screenshot from 2023-08-22 15-53-54](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/2125cf70-9aa7-47dc-af23-39fe5430c884)
 <br />
 
 ### Lab for branches to correct the branch target path
 
+The logic snippet required is given below.<br />
 
+```
+ $pc[31:0] = (>>1$reset) ? 32'b0 : (>>3$valid_taken_br) ? (>>3$br_tgt_pc) :  (>>3$int_pc)  ;
+         //$valid = $reset ? 1'b0 : ($start) ? 1'b1 : (>>3$valid) ; no need for this
+```
 ![Screenshot from 2023-08-22 16-21-25](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/6d68722d-72b5-4014-aca3-63dc3de40249)
 
-### Lab for complete RV32I instruction set (except FENCE,ECALL, EBREAK)
+### Lab for complete RV32I instruction set (except FENCE, ECALL, EBREAK)
 
+<br />
+Added some more instructions to the existing ones and removed bogus codes and added some real values.<br />
 ![Screenshot from 2023-08-22 17-19-00](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/6c9a74cf-9d36-4680-9c50-258335ffc0ce)
 
 
@@ -1231,9 +1253,21 @@ There should be no noticeable changes at this stage.<br />
 
 <details>
 <summary>Load store and data memory | Wrap up</summary>
+<br />
+Similar to branch,load will also have 3 cycle delay. So, added a Data Memory 1 write/read memory.
+Added test case to check the functionality of load/store.<br />
+	
+```
+	uncomment enable m4+dmem(@4)    // Args: (read/write stage)
+ 	connect interface signals using address bits[5:2] to perform load and store (when valid)
+	Additionally Incorporation of Jump feature (JAL and JALR instructions).
+```
 
 Below is the output Makerchip after including load/store instructions:<br />	
+
 ![Screenshot from 2023-08-22 17-50-57](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/7f9f2810-766c-4091-a4a3-ac9d2fa88119)
+
+
 The Final Diagram is shown below.<br /> 
 ![Screenshot from 2023-08-22 17-51-30](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/fcdb0ab4-0a66-40e4-a7a5-b1d7130350ca)
 
