@@ -1163,6 +1163,46 @@ The final code for this module can be viewed [here](codes/day4/day4till.tlv).<br
 
 </details>
 
+## Day 5
+
+<details>
+<summary>Pipeling the CPU </summary>
+<br />
+Pipelining of the CPU core is going to be implemented, streamlining the process of retiming and considerably reducing the occurrence of functional errors. This technique enables faster computational tasks. As previously explained, establishing the pipeline is a straightforward process of incorporating stages labelled as @1, @2, and so on. A visual representation of the pipelining setup is provided below. In TL Verilog, it's important to note that there is no strict requirement to define the pipeline stages in a specific systematic order, providing an extra layer of benefit.<br />
+
+### LAB on Cycle valid signal
+
+We are required to get implement the logic in the following block diagram:<br />
+![Screenshot from 2023-08-22 11-58-45](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/bc1dc35e-c81d-4b62-90c9-1d19a0e76082)
+<br />
+the following code snippet is used here.<br />
+
+```
+
+$valid = $reset ? 1'b0 : ($start) ? 1'b1 : (>>3$valid) ;
+         $start_int = $reset ? 1'b0 : 1'b1;
+         $start = $reset ? 1'b0 : ($start_int && !>>1$start_int);
+```
+
+The following waveform is obtained.<br />
+
+![Screenshot from 2023-08-22 12-02-15](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/c09489d1-2a8c-4faa-b275-9f5f9bec93ce)
+<br />
+
+### LAB to take care of invalid cycles
+
+![Screenshot from 2023-08-22 12-51-10](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/83a6e6fb-cb19-42e7-ad44-ab070bb24653)
+
+![Screenshot from 2023-08-22 12-49-45](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/0a672c89-7d17-4fb8-bc97-d73a9aef87fd)
+
+### LAB to distribute logic
+
+Pipelining is done in this step. Code is distributed and output is obtained.<br />
+![Screenshot from 2023-08-22 12-51-10](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/42860c05-ce19-40e1-aba8-0b7f9e665299)
+
+![Screenshot from 2023-08-22 13-01-57](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/bbb378be-66fe-4235-a725-9a993cfc8ef9)
+
+</details>
 
 # Acknowledgements
 - [Kunal Ghosh](https://github.com/kunalg123), Co-founder, VSD Corp. Pvt. Ltd.
