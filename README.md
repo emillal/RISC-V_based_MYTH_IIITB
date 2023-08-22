@@ -1163,7 +1163,7 @@ The final code for this module can be viewed [here](codes/day4/day4till.tlv).<br
 
 </details>
 
-## Day 5
+# Day 5
 
 <details>
 <summary>Pipeling the CPU </summary>
@@ -1198,6 +1198,7 @@ The following waveform is obtained.<br />
 ### LAB to distribute logic
 
 Pipelining is done in this step. Code is distributed and output is obtained.<br />
+
 ![Screenshot from 2023-08-22 12-51-10](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/42860c05-ce19-40e1-aba8-0b7f9e665299)
 
 ![Screenshot from 2023-08-22 13-01-57](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/bbb378be-66fe-4235-a725-9a993cfc8ef9)
