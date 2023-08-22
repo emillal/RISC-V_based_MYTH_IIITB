@@ -1162,6 +1162,7 @@ The output as shown on Makerchip is:<br />
 The final code for this module can be viewed [here](codes/day4/day4till.tlv).<br />
 
 </details>
+<--
 
 # Day 5
 
@@ -1276,7 +1277,7 @@ The Final Diagram is shown below.<br />
 ## [Click to view the final code](codes/calc_pipe.tlv).
 
 </details>
-
+-->
 
 # Acknowledgements
 - [Kunal Ghosh](https://github.com/kunalg123), Co-founder, VSD Corp. Pvt. Ltd.
