@@ -1162,11 +1162,11 @@ The output as shown on Makerchip is:<br />
 The final code for this module can be viewed [here](codes/day4/day4till.tlv).<br />
 
 </details>
-<--
+
 
 # Day 5
 
-<details>
+<-- <details>
 <summary>Pipeling the CPU </summary>
 <br />
 Pipelining of the CPU core is going to be implemented, streamlining the process of retiming and considerably reducing the occurrence of functional errors. This technique enables faster computational tasks. As previously explained, establishing the pipeline is a straightforward process of incorporating stages labelled as @1, @2, and so on. A visual representation of the pipelining setup is provided below. In TL Verilog, it's important to note that there is no strict requirement to define the pipeline stages in a specific systematic order, providing an extra layer of benefit.<br />
@@ -1276,8 +1276,8 @@ The Final Diagram is shown below.<br />
 
 ## [Click to view the final code](codes/calc_pipe.tlv).
 
-</details>
--->
+</details> -->
+
 
 # Acknowledgements
 - [Kunal Ghosh](https://github.com/kunalg123), Co-founder, VSD Corp. Pvt. Ltd.
