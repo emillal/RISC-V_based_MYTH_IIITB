@@ -1240,12 +1240,14 @@ The logic snippet required is given below.<br />
  $pc[31:0] = (>>1$reset) ? 32'b0 : (>>3$valid_taken_br) ? (>>3$br_tgt_pc) :  (>>3$int_pc)  ;
          //$valid = $reset ? 1'b0 : ($start) ? 1'b1 : (>>3$valid) ; no need for this
 ```
+
 ![Screenshot from 2023-08-22 16-21-25](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/6d68722d-72b5-4014-aca3-63dc3de40249)
 
 ### Lab for complete RV32I instruction set (except FENCE, ECALL, EBREAK)
 
 <br />
 Added some more instructions to the existing ones and removed bogus codes and added some real values.<br />
+
 ![Screenshot from 2023-08-22 17-19-00](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/6c9a74cf-9d36-4680-9c50-258335ffc0ce)
 
 
