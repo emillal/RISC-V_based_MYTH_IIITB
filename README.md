@@ -16,7 +16,7 @@ This repository summarises work done in ASIC class on the RISC-V workshop mentor
 - [Reference](#Reference)
  
 
-# Day 1-Introduction to RISC-V ISA And GNU compiler toolchain
+## Day 1-Introduction to RISC-V ISA And GNU compiler toolchain
 <details>
   <summary>Introduction</summary>
   <br />
@@ -269,7 +269,7 @@ The below screenshot shows the output of the same.<br />
 	
 </details>
 
-# Day 2-Introduction to Application Binary Interface And Basic Error Flow
+## Day 2-Introduction to Application Binary Interface And Basic Error Flow
 
 <details>
   <summary>Introduction to ABI and verification Flows</summary>
@@ -464,7 +464,7 @@ The below file is firmware32.hex  (bitstream).<br />
 
 </details>
 
-# Day 3-Introduction to TL Verilog and Makerchip
+## Day 3-Introduction to TL Verilog and Makerchip
 <details>
 <summary>Digital logic with TL-Verilog and Makerchip</summary>
 <br />
@@ -647,7 +647,7 @@ The output on Makechip is:<br />
 
 </details>
 
-# Day 4-Basic RISC-V CPU micro-architecture
+## Day 4-Basic RISC-V CPU micro-architecture
 <details>
 <summary>Introduction to RISC-V microacrchitecture</summary>
 <br />
@@ -1179,7 +1179,7 @@ The final code for this module can be viewed [here](codes/day4/day4till.tlv).<br
 </details>
 
 
-# Day 5-Complete Pipelined RISC-V CPU Microarchitecture
+## Day 5-Complete Pipelined RISC-V CPU Microarchitecture
 
 <!--<details>?
 <summary>Pipeling the CPU </summary>
