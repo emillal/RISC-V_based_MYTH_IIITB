@@ -1273,7 +1273,7 @@ Below is the output Makerchip after including load/store instructions:<br />
 The Final Diagram is shown below.<br /> 
 ![Screenshot from 2023-08-22 17-51-30](https://github.com/mrdunker/RISC-V_based_MYTH_IIITB/assets/38190245/fcdb0ab4-0a66-40e4-a7a5-b1d7130350ca)
 
-Click to view the final code.
+## [Click to view the final code](codes/calc_pipe.tlv).
 
 </details>
 
